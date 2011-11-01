@@ -50,9 +50,19 @@ a img {
   border: none;
 }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
+}
+
+@font-face {
+  font-family: "CABNDWebBold";
+  src: url("cabndwebbold-webfont.eot");
+  src: url("cabndwebbold-webfont.eot?#iefix") format("embedded-opentype");
+  src: url("cabndwebbold-webfont.woff") format("woff");
+  src: url("cabndwebbold-webfont.ttf") format("truetype");
+  src: url("cabndwebbold-webfont.svg#CABNDWebBold") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 a {
@@ -66,43 +76,163 @@ a:focus, a:active {
   outline: none;
 }
 
+input[type=text] {
+  background: white;
+  border: 1px solid #999999;
+  color: #999999;
+  padding: 5px 10px;
+  margin-right: 20px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+input[type=submit] {
+  font-family: CABNDWebBold, Helvetica, Arial, sans-serif;
+  background: #f16421;
+  border: none;
+  height: 40px;
+  line-height: 40px;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: white;
+}
+input[type=submit]:hover {
+  background: #ebe2e2;
+  color: #f16421;
+}
+
 body {
   font: 13px Arial, Helvetica, sans-serif;
-  background: white;
-  color: #0d0d0d;
+  background: #eeeff2 url("../images/noise.png");
+  color: #616161;
 }
-body h1 {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  font-size: 40px;
-  font-weight: bold;
-  margin-top: -40px;
-  text-align: center;
+body #menu {
+  background: #f16421;
+  position: fixed;
+  top: 41px;
+  width: 100%;
+  height: 49px;
+}
+body #menu ul {
+  width: 950px;
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
+}
+body #menu ul li {
+  display: inline;
+  line-height: 48px;
+  font-size: 1.2em;
+  font-family: CABNDWebBold, Helvetica, Arial, sans-serif;
+}
+body #menu ul li.followontwitter {
+  display: inline;
+  float: right;
+  background: url("../images/sprite_social.png") no-repeat 139px -15px;
+}
+body #menu ul li.followontwitter:hover {
+  background-position: 139px -63px;
+}
+body #menu ul li.followontwitter a {
   width: 100%;
 }
-body ul {
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -o-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -khtml-border-radius: 6px;
-  border-radius: 6px;
-  background: #e7e7e7;
-  border: 1px solid #cccccc;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-body ul li {
-  display: inline;
-  line-height: 30px;
-  padding: 0 15px;
-}
-body ul li a {
-  color: black;
+body #menu ul li a {
+  color: #ebe2e2;
   text-decoration: none;
+  margin-right: 50px;
+  display: inline-block;
+  height: 100%;
+  -webkit-transition: color 0.25s linear 0.1s;
+  transition: color 0.25s linear 0.1s;
 }
-body ul li a:hover {
-  text-decoration: underline;
+body #menu ul li a:hover {
+  text-decoration: none;
+  color: white;
+}
+body #content {
+  width: 950px;
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
+  margin-top: 135px;
+}
+body #content #top_ribbon #ribbon_one {
+  background: red;
+  display: inline;
+  float: right;
+}
+body #content #logo {
+  font-family: CABNDWebBold, Helvetica, Arial, sans-serif;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 480px;
+  background: url("../images/sprite_logo.png") no-repeat -10px -10px;
+  padding-left: 78px;
+  margin-right: -10px;
+  font-size: 76px;
+  line-height: 0.86;
+  height: 93px;
+}
+* html body #content #logo {
+  overflow-x: hidden;
+}
+body #content #logo:hover {
+  background-position: -10px -113px;
+  cursor: pointer;
+}
+body #content #logo em {
+  color: #999999;
+}
+body #content #logo span {
+  display: inline;
+  float: left;
+  color: #f16421;
+  font-size: 27px;
+  padding-top: 8px;
+  text-transform: uppercase;
+}
+body #content #staytunes {
+  font-family: CABNDWebBold, Helvetica, Arial, sans-serif;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 270px;
+  width: 360px;
+  background: url("../images/year.png") no-repeat 0 1px;
+  height: 200px;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #999999;
+  padding-left: 27px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #999999;
+}
+* html body #content #staytunes {
+  overflow-x: hidden;
+}
+body #content #staytunes span {
+  display: inline;
+  float: left;
+  line-height: 0.85;
+  font-size: 76px;
+}
+body #content #staytunes #formmail {
+  padding-left: 135px;
+  padding-top: 15px;
+  margin-top: 8px;
+  background: url("../images/sprite_arrows.png") repeat-y -6px 106px;
+  text-align: right;
+  position: relative;
+  height: 90px;
+}
+body #content #staytunes #formmail input {
+  width: 100%;
+}
+body #content #staytunes #formmail input[type=text] {
+  width: 91%;
+  margin-bottom: 10px;
 }

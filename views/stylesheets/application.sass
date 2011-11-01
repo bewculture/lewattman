@@ -1,10 +1,61 @@
-@import compass/reset
-@import compass/utilities
-@import compass/css3
+@import compass
+@import blueprint
+@import "compass/reset"
+@import "compass/utilities/general/float"
+@import "compass/css3/font-face"
+@import "blueprint/buttons"
+@import "compass/css3/border-radius"
+
+// Colors
+$orange     : #f16421 
+// ... greys 
+$lightgrey  : #999
+$black      : #5e5e5d
+$menugrey   : #ebe2e2
+$bg         : #eeeff2
+$color      : #616161
+// ... blues 
+$lightblue  : #00879e
+$blue       : #ebe2e2
+// ... greens
+$green      : #75b948
+$inside     : white
+
+// Default Parameters
+$blueprint_grid_columns : 12
+$blueprint-grid-margin  : 10px
+$blueprint-grid-width   : 60px
+
+$social   : url('../images/sprite_social.png')
+$arrows   : url('../images/sprite_arrows.png')
+$contacts : url('../images/sprite_contact.png')
+$logo     : url('../images/sprite_logo.png')
+$year     : url('../images/year.png')
+
 
 // Base font
+
+//+font-face("CABNDWebBold", font-files("cabndwebbold-webfont.woff", "woff", "cabndwebbold-webfont.ttf", "truetype", "cabndwebbold-webfont.svg#CABNDWebBold", "svg" ), "cabndwebbold-webfont.eot", normal, normal)
+@font-face 
+  font-family: 'CABNDWebBold'
+  src: url('cabndwebbold-webfont.eot')
+  src: url('cabndwebbold-webfont.eot?#iefix') format('embedded-opentype')
+  src: url('cabndwebbold-webfont.woff') format('woff')
+  src: url('cabndwebbold-webfont.ttf') format('truetype')
+  src: url('cabndwebbold-webfont.svg#CABNDWebBold') format('svg')
+  font-weight: normal
+  font-style: normal
+
 =font-default
   font: 13px Arial, Helvetica, sans-serif
+
+=font-sdg
+  font-family: CABNDWebBold, Helvetica, Arial, sans-serif
+
+=middle-size($x)
+  font-size: 28px
+  text-transform: uppercase
+  color: $x
   
 // Links
 a
@@ -18,32 +69,118 @@ a
   &:visited
     // Default style for visited links
 
+input
+  &[type=text]
+    background: white
+    border: 1px solid $lightgrey
+    color: $lightgrey
+    padding:  5px 10px
+    margin-right: 20px
+    +border-radius
+  &[type=submit] 
+    +font-sdg
+    background: $orange 
+    border: none
+    height: 40px
+    line-height: 40px
+    +middle-size($inside)
+    &:hover
+      background: $menugrey
+      color: $orange
+
 body
   +font-default
-  background: #fff
-  color: #0d0d0d
-  h1
-    position: absolute
-    top: 50%
-    left: 0
-    font-size: 40px
-    font-weight: bold
-    margin-top: -40px
-    text-align: center
+  background: $bg url('../images/noise.png')
+  color: $color
+    
+  #menu
+    background: $orange
+    position: fixed
+    top: 41px
     width: 100%
-  ul
-    +border-radius(6px)
-    background: #e7e7e7
-    border: 1px solid #ccc
-    margin-top: 10px
-    margin-left: 10px
-    margin-right: 10px
-    li
-      display: inline
-      line-height: 30px
-      padding: 0 15px
-      a
-        color: #000
-        text-decoration: none
-        &:hover
-          text-decoration: underline
+    height: 49px
+    ul
+      +container
+      li
+        display: inline
+        line-height: 48px
+        font-size: 1.2em
+        +font-sdg
+        &.followontwitter
+          +float-right
+          background: $social no-repeat 139px -15px
+          &:hover
+            background-position: 139px -63px
+          a
+            width: 100%
+        a
+          color: $menugrey
+          text-decoration: none
+          margin-right: 50px
+          display: inline-block
+          height: 100%
+          -webkit-transition: color .25s linear .1s
+          transition: color .25s linear .1s
+          &:hover
+            text-decoration: none
+            color: white
+  
+  #content
+    +container
+    margin-top: 135px
+    #top_ribbon
+      position:relative
+      #ribbon_one
+        background: red
+        +float-right
+    #logo
+      +font-sdg
+      +column(7)
+      background: $logo no-repeat -10px -10px
+      padding-left: 78px
+      margin-right: -10px
+      font-size: 76px
+      line-height: 0.86
+      height: 93px
+      &:hover
+        background-position: -10px -113px
+        cursor: pointer
+      em
+        color: $lightgrey
+      span
+        +float-left
+        color: $orange
+        font-size: 27px
+        padding-top: 8px
+        text-transform: uppercase
+    #staytunes
+      +font-sdg
+      +column(4)
+      width: 360px
+      background: $year no-repeat 0 1px
+      height: 200px
+      +middle-size($lightgrey)
+      padding:
+        left: 27px
+        bottom: 10px
+      border-bottom: 1px solid $lightgrey
+      span
+        +float-left
+        line-height: 0.85
+        font-size: 76px
+      #formmail
+        padding:
+          left: 135px
+          top: 15px
+        margin-top: 8px
+        background: $arrows repeat-y -6px 106px
+        text-align: right
+        position: relative
+        height: 90px
+        input
+          width: 100%
+          &[type=text]
+            width: 91%
+            margin-bottom: 10px
+      
+    
