@@ -111,10 +111,13 @@ body {
 }
 body #menu {
   background: #f16421;
-  position: fixed;
+  position: absolute;
   top: 41px;
   width: 100%;
   height: 49px;
+}
+body #menu.fixed {
+  position: fixed;
 }
 body #menu ul {
   width: 950px;
@@ -172,6 +175,12 @@ body #content #top_ribbon #ribbon_one {
   position: absolute;
   right: -54px;
   margin-top: -130px;
+}
+body #content #top_ribbon #ribbon_one.fixed {
+  margin-left: 937px;
+  position: fixed;
+  right: initial;
+  top: -127px;
 }
 body #content #logo {
   font-family: CABNDWebBold, Helvetica, Arial, sans-serif;
