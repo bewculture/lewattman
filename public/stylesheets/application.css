@@ -54,6 +54,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+.orange {
+  color: #f16421;
+}
+
+.blue {
+  color: #00879e;
+}
+
+.green {
+  color: #75b948;
+}
+
 @font-face {
   font-family: "CABNDWebBold";
   src: url("cabndwebbold-webfont.eot");
@@ -116,6 +128,7 @@ body #menu {
   top: 41px;
   width: 100%;
   height: 49px;
+  z-index: 10;
 }
 body #menu.fixed {
   position: fixed;
@@ -167,7 +180,7 @@ body #content {
   overflow: visible;
 }
 body #content #top_ribbon {
-  z-index: 2;
+  z-index: 11;
   position: relative;
 }
 body #content #top_ribbon #ribbon_one {
@@ -272,9 +285,107 @@ body #content #bullshit {
   width: 830px;
   overflow: hidden;
   *zoom: 1;
-  height: 1000px;
-  border-left: 1px #999999 dashed;
 }
 * html body #content #bullshit {
   overflow-x: hidden;
+}
+body #content h1 {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 830px;
+  width: 100%;
+  font-family: "CABNDWebBold", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  margin-top: 75px;
+  border-bottom: 1px solid #999999;
+  font-size: 4.25em;
+  position: relative;
+}
+* html body #content h1 {
+  overflow-x: hidden;
+}
+body #content h1.small {
+  font-size: 3em;
+}
+body #content h1 .ribbon {
+  background: no-repeat;
+  position: absolute;
+}
+body #content h1 .ribbon.discover {
+  left: -73px;
+  top: 15px;
+  height: 413px;
+  width: 73px;
+  background: url("../images/ribbon02.png") no-repeat 0 0;
+}
+body #content h1 .ribbon.participant {
+  left: -73px;
+  top: 27px;
+  height: 204px;
+  width: 73px;
+  background: url("../images/ribbon03.png") no-repeat 6px 0;
+}
+body #content h1 .ribbon.sponsors {
+  left: -68px;
+  top: 27px;
+  height: 282px;
+  width: 73px;
+  background: url("../images/ribbon04.png") no-repeat -6px 0;
+}
+body #content #discover {
+  width: 950px;
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
+  height: 326px;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 0;
+  border-bottom: 1px solid #999999;
+  position: relative;
+  margin-bottom: 30px;
+}
+body #content #participant {
+  width: 950px;
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
+  height: 124px;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 0;
+  border-bottom: 1px solid #999999;
+  position: relative;
+  margin-bottom: 30px;
+}
+body #content #sponsors {
+  width: 950px;
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
+  height: 198px;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 0;
+  border-bottom: 1px solid #999999;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+@-moz-document url-prefix() {
+  body #content h1 .ribbon.discover {
+    top: 20px;
+  }
+
+  body #content h1 .ribbon.participant {
+    top: 32px;
+  }
+
+  body #content h1 .ribbon.sponsors {
+    top: 32px;
+  }
 }

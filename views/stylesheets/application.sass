@@ -32,6 +32,13 @@ $contacts : url('../images/sprite_contact.png')
 $logo     : url('../images/sprite_logo.png')
 $year     : url('../images/year.png')
 
+.orange
+  color: $orange
+.blue
+  color: $lightblue
+.green
+  color: $green
+
 
 // Base font
 
@@ -72,7 +79,23 @@ $year     : url('../images/year.png')
 =firefox-hack ($selector, $values) 
   @-moz-document url-prefix() { $selector { $values; } }
 
-  
+=border-box($x)
+  $padding: 15px
+  +container
+  height: $x
+  padding: 
+    top: $padding
+    left: $padding
+    right: $padding
+    bottom: 0
+  border:
+    bottom: 1px solid $lightgrey
+  position: relative
+  margin:
+    bottom: 30px
+
+    
+        
 // Links
 a
   color: #3366CC
@@ -115,6 +138,7 @@ body
     top: 41px
     width: 100%
     height: 49px
+    z-index: 10
     &.fixed
       position: fixed
     ul
@@ -150,7 +174,7 @@ body
     overflow: visible
     #top_ribbon
       // margin-top: -135px
-      z-index: 2
+      z-index: 11
       position: relative
       #ribbon_one
         background: url('../images/ribbon01.png') no-repeat -11px -9px
@@ -224,7 +248,55 @@ body
     #bullshit
       +column(12)
       +clearfix
-      height: 1000px
-      border-left: 1px $lightgrey dashed
-      
+      //height: 1000px
+      //border-left: 1px $lightgrey dashed
+    h1
+      +column(12)
+      width: 100%
+      +font-sdg
+      margin:
+        top: 75px
+      border:
+        bottom: 1px solid $lightgrey
+      font-size: 4.25em
+      position: relative
+      &.small
+        font-size: 3em
+      .ribbon
+        background: no-repeat
+        position: absolute
+        //border: 1px solid
+        &.discover
+          left: -73px
+          top: 15px
+          height: 413px
+          width: 73px 
+          background: url('../images/ribbon02.png') no-repeat 0 0
+        &.participant
+          left: -73px
+          top: 27px
+          height: 204px
+          width: 73px 
+          background: url('../images/ribbon03.png') no-repeat 6px 0
+        &.sponsors
+          left: -68px
+          top: 27px
+          height: 282px
+          width: 73px 
+          background: url('../images/ribbon04.png') no-repeat -6px 0  
+    #discover
+      +border-box(326px)
+    #participant
+      +border-box(124px)
+    #sponsors
+      +border-box(198px)
+
+@-moz-document url-prefix()
+  body #content h1 .ribbon.discover
+    top: 20px
+  body #content h1 .ribbon.participant
+    top: 32px
+  body #content h1 .ribbon.sponsors
+    top: 32px
+
     
