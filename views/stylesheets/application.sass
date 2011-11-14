@@ -49,9 +49,9 @@ $year     : url('../images/year.png')
 @font-face 
   font-family: "CABNDWebBold"
   src: url('cabndwebbold-webfont.eot')
+  src: url('cabndwebbold-webfont.eot?#iefix') format('embedded-opentype')
+  src: url('cabndwebbold-webfont.woff') format('woff')
   src: url('cabndwebbold-webfont.svg#CABNDWebBold') format("svg"), url('cabndwebbold-webfont.ttf') format("truetype")
-  //src: url('cabndwebbold-webfont.eot?#iefix') format('embedded-opentype')
-  // src: url('cabndwebbold-webfont.woff') format('woff')
   font-weight: normal
   font-style: normal
 
@@ -68,6 +68,10 @@ $year     : url('../images/year.png')
   font-size: 28px
   text-transform: uppercase
   color: $x
+  
+=firefox-hack ($selector, $values) 
+  @-moz-document url-prefix() { $selector { $values; } }
+
   
 // Links
 a
@@ -143,7 +147,7 @@ body
   #content
     +container
     padding-top: 143px
-    overflow: initial
+    overflow: visible
     #top_ribbon
       // margin-top: -135px
       z-index: 2
@@ -161,8 +165,11 @@ body
           margin: 
             left: 931px
           position: fixed
-          right: initial
+          right: auto
           top: -168px
+          @-moz-document url-prefix()
+            right: auto
+            left: auto
     #logo
       +font-sdg
       +column(7)

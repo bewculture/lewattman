@@ -57,6 +57,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 @font-face {
   font-family: "CABNDWebBold";
   src: url("cabndwebbold-webfont.eot");
+  src: url("cabndwebbold-webfont.eot?#iefix") format("embedded-opentype");
+  src: url("cabndwebbold-webfont.woff") format("woff");
   src: url("cabndwebbold-webfont.svg#CABNDWebBold") format("svg"), url("cabndwebbold-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -162,7 +164,7 @@ body #content {
   overflow: hidden;
   *zoom: 1;
   padding-top: 143px;
-  overflow: initial;
+  overflow: visible;
 }
 body #content #top_ribbon {
   z-index: 2;
@@ -179,8 +181,13 @@ body #content #top_ribbon #ribbon_one {
 body #content #top_ribbon #ribbon_one.fixed {
   margin-left: 931px;
   position: fixed;
-  right: initial;
+  right: auto;
   top: -168px;
+  @-moz-document url-prefix() {
+    right: auto;
+    left: auto;
+}
+
 }
 body #content #logo {
   font-family: "CABNDWebBold", Helvetica, Arial, sans-serif;
