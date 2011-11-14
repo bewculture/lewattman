@@ -35,22 +35,34 @@ $year     : url('../images/year.png')
 
 // Base font
 
+//Working with firefox
+// @font-face {
+//   font-family: "CABNDWebBold";
+//   src: url("cabndwebbold-webfont.eot");
+//   src: url("cabndwebbold-webfont.ttf") format("truetype"), url("cabndwebbold-webfont.svg#CABNDWebBold") format("svg");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+
 //+font-face("CABNDWebBold", font-files("cabndwebbold-webfont.woff", "woff", "cabndwebbold-webfont.ttf", "truetype", "cabndwebbold-webfont.svg#CABNDWebBold", "svg" ), "cabndwebbold-webfont.eot", normal, normal)
 @font-face 
   font-family: "CABNDWebBold"
   src: url('cabndwebbold-webfont.eot')
-  src: url('cabndwebbold-webfont.eot?#iefix') format('embedded-opentype')
-  src: url('cabndwebbold-webfont.woff') format('woff')
-  src: url('cabndwebbold-webfont.ttf') format('truetype')
-  src: url('cabndwebbold-webfont.svg#CABNDWebBold') format('svg')
+  src: url('cabndwebbold-webfont.svg#CABNDWebBold') format("svg"), url('cabndwebbold-webfont.ttf') format("truetype")
+  //src: url('cabndwebbold-webfont.eot?#iefix') format('embedded-opentype')
+  // src: url('cabndwebbold-webfont.woff') format('woff')
   font-weight: normal
   font-style: normal
 
+
 =font-default
-  font: 13px Arial, Helvetica, sans-serif
+  font: 13px Arial, Helvetica, sans-serif 
+  font-style: normal
 
 =font-sdg
-  font-family: CABNDWebBold, Helvetica, Arial, sans-serif
+  font-family: "CABNDWebBold", Helvetica, Arial, sans-serif
+  font-style: normal
 
 =middle-size($x)
   font-size: 28px

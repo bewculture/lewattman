@@ -57,10 +57,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 @font-face {
   font-family: "CABNDWebBold";
   src: url("cabndwebbold-webfont.eot");
-  src: url("cabndwebbold-webfont.eot?#iefix") format("embedded-opentype");
-  src: url("cabndwebbold-webfont.woff") format("woff");
-  src: url("cabndwebbold-webfont.ttf") format("truetype");
-  src: url("cabndwebbold-webfont.svg#CABNDWebBold") format("svg");
+  src: url("cabndwebbold-webfont.svg#CABNDWebBold") format("svg"), url("cabndwebbold-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -90,7 +87,8 @@ input[type=text] {
   border-radius: 5px;
 }
 input[type=submit] {
-  font-family: CABNDWebBold, Helvetica, Arial, sans-serif;
+  font-family: "CABNDWebBold", Helvetica, Arial, sans-serif;
+  font-style: normal;
   background: #f16421;
   border: none;
   height: 40px;
@@ -106,6 +104,7 @@ input[type=submit]:hover {
 
 body {
   font: 13px Arial, Helvetica, sans-serif;
+  font-style: normal;
   background: #eeeff2 url("../images/noise.png");
   color: #616161;
 }
@@ -129,7 +128,8 @@ body #menu ul li {
   display: inline;
   line-height: 48px;
   font-size: 1.2em;
-  font-family: CABNDWebBold, Helvetica, Arial, sans-serif;
+  font-family: "CABNDWebBold", Helvetica, Arial, sans-serif;
+  font-style: normal;
 }
 body #menu ul li.followontwitter {
   display: inline;
@@ -183,7 +183,8 @@ body #content #top_ribbon #ribbon_one.fixed {
   top: -168px;
 }
 body #content #logo {
-  font-family: CABNDWebBold, Helvetica, Arial, sans-serif;
+  font-family: "CABNDWebBold", Helvetica, Arial, sans-serif;
+  font-style: normal;
   display: inline;
   float: left;
   margin-right: 10px;
@@ -215,7 +216,8 @@ body #content #logo span {
   text-transform: uppercase;
 }
 body #content #staytunes {
-  font-family: CABNDWebBold, Helvetica, Arial, sans-serif;
+  font-family: "CABNDWebBold", Helvetica, Arial, sans-serif;
+  font-style: normal;
   display: inline;
   float: left;
   margin-right: 10px;
