@@ -8,3 +8,37 @@ $(document).ready(function() {
 	  .attr('target', '_blank');
 
 });
+
+$(window).load(function()
+  {
+    var scroller = new StickyScroller("#menu",
+        {
+            //start: 42,
+            start: 42,
+            end: 1900,
+            interval: 5,
+            range: 300,
+            margin: 0
+        });
+        
+    var opacity = .25;
+    var fadeTime = 300;
+    var current;
+        
+    scroller.onScroll(function(index)
+          {            
+            // console.log('current index : ' + index);
+              if(scroller.inRange())
+              {
+                if (index >= 54)
+                {
+                  $("#ribbon_one").addClass("fixed");
+                } else if (index < 54)
+                {
+                  $("#ribbon_one").removeClass("fixed");
+                }
+              }
+          });
+  
+
+  });

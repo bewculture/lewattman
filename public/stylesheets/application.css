@@ -177,10 +177,10 @@ body #content #top_ribbon #ribbon_one {
   margin-top: -130px;
 }
 body #content #top_ribbon #ribbon_one.fixed {
-  margin-left: 937px;
+  margin-left: 931px;
   position: fixed;
   right: initial;
-  top: -127px;
+  top: -168px;
 }
 body #content #logo {
   font-family: CABNDWebBold, Helvetica, Arial, sans-serif;
@@ -255,4 +255,17 @@ body #content #staytunes #formmail input {
 body #content #staytunes #formmail input[type=text] {
   width: 91%;
   margin-bottom: 10px;
+}
+body #content #bullshit {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 830px;
+  overflow: hidden;
+  *zoom: 1;
+  height: 1000px;
+  border-left: 1px #999999 dashed;
+}
+* html body #content #bullshit {
+  overflow-x: hidden;
 }

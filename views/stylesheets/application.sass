@@ -37,7 +37,7 @@ $year     : url('../images/year.png')
 
 //+font-face("CABNDWebBold", font-files("cabndwebbold-webfont.woff", "woff", "cabndwebbold-webfont.ttf", "truetype", "cabndwebbold-webfont.svg#CABNDWebBold", "svg" ), "cabndwebbold-webfont.eot", normal, normal)
 @font-face 
-  font-family: 'CABNDWebBold'
+  font-family: "CABNDWebBold"
   src: url('cabndwebbold-webfont.eot')
   src: url('cabndwebbold-webfont.eot?#iefix') format('embedded-opentype')
   src: url('cabndwebbold-webfont.woff') format('woff')
@@ -147,10 +147,10 @@ body
           top: -130px
         &.fixed
           margin: 
-            left: 937px
+            left: 931px
           position: fixed
           right: initial
-          top: -127px
+          top: -168px
     #logo
       +font-sdg
       +column(7)
@@ -202,5 +202,10 @@ body
           &[type=text]
             width: 91%
             margin-bottom: 10px
+    #bullshit
+      +column(12)
+      +clearfix
+      height: 1000px
+      border-left: 1px $lightgrey dashed
       
     
