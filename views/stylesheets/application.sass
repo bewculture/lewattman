@@ -16,7 +16,8 @@ $bg         : #eeeff2
 $color      : #616161
 // ... blues 
 $lightblue  : #00879e
-$blue       : #ebe2e2
+// ... red
+$lightred   : #ebe2e2
 // ... greens
 $green      : #75b948
 $inside     : white
@@ -75,6 +76,12 @@ $year     : url('../images/year.png')
   font-size: 28px
   text-transform: uppercase
   color: $x
+  
+=outgridded($height)
+  height: $height
+  width: 100%
+  .gridded
+    +container
   
 =firefox-hack ($selector, $values) 
   @-moz-document url-prefix() { $selector { $values; } }
@@ -167,7 +174,9 @@ body
           &:hover
             text-decoration: none
             color: white
-  
+
+  .gridded
+    +container
   #content
     +container
     padding-top: 143px
@@ -291,6 +300,18 @@ body
     #sponsors
       +border-box(198px)
 
+  #contactus
+    background: $lightred url('../images/noise.png')
+    +outgridded(50px)
+    
+  #footer
+    background: url('../images/ribbon_bottom.png') no-repeat 50% 0
+    padding:
+      top: 60px
+    margin:
+      top: 100px
+    +outgridded(100px)
+    
 @-moz-document url-prefix()
   body #content h1 .ribbon.discover
     top: 20px
