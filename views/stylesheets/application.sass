@@ -1,19 +1,23 @@
-@import compass
-@import blueprint
+@import "compass"
+@import "blueprint"
 @import "compass/reset"
 @import "compass/utilities/general/float"
 @import "compass/css3/font-face"
 @import "blueprint/buttons"
 @import "compass/css3/border-radius"
 
+@import "compass/layout/grid-background"
+
 // Colors
 $orange     : #f16421 
 // ... greys 
-$lightgrey  : #999
-$black      : #5e5e5d
-$menugrey   : #ebe2e2
-$bg         : #eeeff2
-$color      : #616161
+$lightgrey      : #999
+$black          : #5e5e5d
+$menugrey       : #ebe2e2
+$bg             : #eeeff2
+$color          : #616161
+$bottom         : #e2e2e2
+$invisiblegrey  : #dcdcdc
 // ... blues 
 $lightblue  : #00879e
 // ... red
@@ -23,9 +27,12 @@ $green      : #75b948
 $inside     : white
 
 // Default Parameters
-$blueprint_grid_columns : 12
-$blueprint-grid-margin  : 10px
-$blueprint-grid-width   : 60px
+$blueprint_grid_columns     : 12
+$blueprint-grid-margin      : 15px
+$blueprint-grid-width       : 65px
+$blueprint-grid-outer-width : 80px
+$blueprint-container-size   : 960px
+
 
 $social   : url('../images/sprite_social.png')
 $arrows   : url('../images/sprite_arrows.png')
@@ -39,6 +46,8 @@ $year     : url('../images/year.png')
   color: $lightblue
 .green
   color: $green
+.grey
+  color: $color !important
 
 
 // Base font
@@ -73,15 +82,21 @@ $year     : url('../images/year.png')
   font-style: normal
 
 =middle-size($x)
-  font-size: 28px
   text-transform: uppercase
   color: $x
   
-=outgridded($height)
+=outgridded($height: auto)
   height: $height
   width: 100%
   .gridded
     +container
+
+=input-form($height, $adjust:0px)
+  height: $height
+  @if $adjust==0px
+    line-height: $height
+  @else
+    line-height: $adjust
   
 =firefox-hack ($selector, $values) 
   @-moz-document url-prefix() { $selector { $values; } }
@@ -101,14 +116,19 @@ $year     : url('../images/year.png')
   margin:
     bottom: 30px
 
-    
+// DEBUG
+
+//.gridded
+//  +showgrid    
         
 // Links
 a
-  color: #3366CC
+  color: $color
+  text-decoration: none
+  font-weight: bold
+  +single-transition(color, .5s, linear, .1s)
   &:hover
-    color: #3366CC
-    text-decoration: none
+    color: $orange
   &:focus,
   &:active
     outline: none
@@ -121,18 +141,28 @@ input
     border: 1px solid $lightgrey
     color: $lightgrey
     padding:  5px 10px
-    margin-right: 20px
+    margin:
+      right: 20px
+      bottom: 10px
     +border-radius
   &[type=submit] 
     +font-sdg
-    background: $orange 
+    background: $lightgrey
     border: none
-    height: 40px
-    line-height: 40px
+    +input-form(25px, 24px)
     +middle-size($inside)
     &:hover
       background: $menugrey
       color: $orange
+
+h1
+  +column(12)
+  width: 100%
+  +font-sdg
+  margin:
+    top: 60px
+    bottom: 45px
+  font-size: 3em
 
 body
   +font-default
@@ -169,8 +199,8 @@ body
           margin-right: 50px
           display: inline-block
           height: 100%
-          -webkit-transition: color .25s linear .1s
-          transition: color .25s linear .1s
+          font-weight: normal 
+          +single-transition(color, .5s, linear, .1s)
           &:hover
             text-decoration: none
             color: white
@@ -179,6 +209,8 @@ body
     +container
   #content
     +container
+    //+showgrid
+    
     padding-top: 143px
     overflow: visible
     #top_ribbon
@@ -196,7 +228,7 @@ body
           top: -130px
         &.fixed
           margin: 
-            left: 931px
+            left: 941px
           position: fixed
           right: auto
           top: -168px
@@ -207,53 +239,76 @@ body
       +font-sdg
       +column(7)
       background: $logo no-repeat -10px -10px
-      padding-left: 78px
-      margin-right: -10px
-      font-size: 76px
-      line-height: 0.86
+      //padding-left: 78px
+      //margin-right: -10px
       height: 93px
       z-index: 1
       &:hover
         background-position: -10px -113px
         cursor: pointer
-      em
-        color: $lightgrey
       span
-        +float-left
+        //+float-left
+        +column(6)
+        +prepend(1)
+      #baseline
         color: $orange
         font-size: 27px
-        padding-top: 8px
+        padding-top: 5px
         text-transform: uppercase
+      #title
+        font-size: 76px
+        line-height: 0.86
+        em
+          color: $lightgrey
+
+          
     #staytunes
       +font-sdg
-      +column(4)
-      width: 360px
+      +column(5)
+      //width: 360px
       background: $year no-repeat 0 1px
-      height: 206px
+      height: 217px
+      font-size: 28px
       +middle-size($lightgrey)
-      padding:
-        left: 27px
-        bottom: 10px
+      //padding:
+        //left: 27px
+        //bottom: 10px
       border-bottom: 1px solid $lightgrey
       span
         +float-left
         line-height: 0.85
         font-size: 76px
+        padding-left: 26px
       #formmail
-        padding:
-          left: 135px
-          top: 19px
-        margin-top: 8px
-        background: $arrows repeat-y -6px 110px
+        +column(5)
+        //padding:
+          //left: 135px
+          //top: 19px
+        margin-top: 5px
+        background: $arrows repeat-y 20px 110px 
         text-align: right
         position: relative
-        height: 90px
-        z-index: -1
-        input
-          width: 100%
-          &[type=text]
-            width: 91%
-            margin-bottom: 10px
+        //height: 90px
+        z-index: 1
+        .form
+          padding:
+            top: 19px
+          +column(3)
+          +prepend(2)
+          input
+            width: 100%
+            &[type=text]
+              width: 91%
+            &[type=submit] 
+              background: $orange 
+              border: none
+              font-size: 28px
+              height: 40px
+              line-height: 40px
+              &:hover
+                background: $menugrey
+                color: $orange
+
     #bullshit
       +column(12)
       +clearfix
@@ -261,10 +316,10 @@ body
       //border-left: 1px $lightgrey dashed
     h1
       +column(12)
-      width: 100%
       +font-sdg
       margin:
         top: 75px
+        bottom: auto
       border:
         bottom: 1px solid $lightgrey
       font-size: 4.25em
@@ -301,16 +356,163 @@ body
       +border-box(198px)
 
   #contactus
-    background: $lightred url('../images/noise.png')
-    +outgridded(50px)
+    background: $lightred /*url('../images/noise.png')*/
+    +outgridded()
+    padding:
+      bottom: 50px
+    h1
+      color: $orange
+    form
+      +column(5)
+      font-size: 1.3em
+      input[type=text]
+        background: white url('../images/sprite_contact.png') no-repeat 
+        +column(3)
+        +clearfix
+        border: $invisiblegrey 1px solid
+        +border-radius(3px)
+        height: 18px
+        padding:
+          left: 40px
+        +reset-focus
+      textarea
+        +column(5)
+        +clearfix
+        height: 150px
+        border: $invisiblegrey 1px solid
+        margin:
+          bottom: 20px
+        +border-radius(3px)
+        padding: 5px 10px
+        +reset-focus
+      input[type=submit]
+        +column(2)
+        +clearfix
+        border: none
+        background: $orange
+        font-size: 24px
+        +input-form(35px)
+        &:hover
+          background: $menugrey
+          color: $orange
+      input
+        &.name
+          background:
+            position: -7px -5px
+        &.email
+          background:
+            position: -7px -45px
+        &.message
+      
+    .contactinfo
+      +column(6)
+      +prepend(1)
+      li
+        //background: red
+        margin:
+          bottom: 35px
+        font-size: 1.1em
+        +clearfix
+        padding:
+          left: $blueprint-grid-margin + $blueprint-grid-width
+        background: url('../images/sprite_contact.png') no-repeat 
+        li:first-child
+          padding:
+            top: 7px
+          font-size: 1.3em
+          a
+            font-size: 0.9em
+        li
+          margin: 0 
+            top: 5px 
+          padding: 
+            left: 0
+          background: none
+          font-weight: bold
+          color: $orange
+        a
+          +column(5)
+          font-weight: normal
+        &.adress
+          background:
+            position: 28px -125px
+        &.phone
+          background:
+            position: 28px -165px
+          height: 32px
+        &.mail
+          background:
+            position: 28px -203px
     
+
+  #about
+    display: inline-block  
+    a, a:hover
+      color: $green
+    .about
+      +column(3)
+      height: 500px
+      h1
+        color: $green
+        margin:
+          bottom: 15px
+    .trombi
+      margin:
+        top: 64px  
+        bottom: 20px
+      li
+        +column(3)
+        height: 260px
+        margin:
+          bottom: 20px
+        .face
+          height: 150px   
+          width: 100%
+          background: black
+        .name
+          +font-sdg
+          font-size: 1.5em
+          padding:
+            top: 15px
+            bottom: 10px
+        .description
+  
   #footer
-    background: url('../images/ribbon_bottom.png') no-repeat 50% 0
+    background: $bottom url('../images/ribbon_bottom.png') no-repeat 50% 0
     padding:
       top: 60px
+      bottom: 30px
     margin:
-      top: 100px
-    +outgridded(100px)
+      top: 75px
+    +outgridded()
+    ul
+      li
+        +column(3)
+        a:hover
+          color: $lightblue
+        h1
+          color: $lightblue
+          font-weight: bold
+          font-size: 13px
+          padding:
+            bottom: 10px
+          margin: 0
+        input
+          &[type=text]
+            +border-radius(0)
+            border:
+              color: $invisiblegrey
+            height: 9px
+            margin:
+              top: -3px
+          &[type=submit] 
+            +input-form(23px, 22px)
+            background: $lightblue
+            color: white
+            &:hover
+              background: white
+              color: $lightblue
+            
     
 @-moz-document url-prefix()
   body #content h1 .ribbon.discover
@@ -319,5 +521,3 @@ body
     top: 32px
   body #content h1 .ribbon.sponsors
     top: 32px
-
-    

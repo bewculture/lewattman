@@ -15,7 +15,7 @@ $(window).load(function()
         {
             //start: 42,
             start: 42,
-            end: 1900,
+            end: 3000,
             interval: 5,
             range: 300,
             margin: 0

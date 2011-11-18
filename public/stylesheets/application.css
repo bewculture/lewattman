@@ -66,6 +66,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   color: #75b948;
 }
 
+.grey {
+  color: #616161 !important;
+}
+
 @font-face {
   font-family: "CABNDWebBold";
   src: url("cabndwebbold-webfont.eot");
@@ -77,11 +81,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 a {
-  color: #3366cc;
+  color: #616161;
+  text-decoration: none;
+  font-weight: bold;
+  -moz-transition-property: color;
+  -webkit-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
+  -moz-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -moz-transition-timing-function: linear;
+  -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -moz-transition-delay: 0.1s;
+  -webkit-transition-delay: 0.1s;
+  -o-transition-delay: 0.1s;
+  transition-delay: 0.1s;
 }
 a:hover {
-  color: #3366cc;
-  text-decoration: none;
+  color: #f16421;
 }
 a:focus, a:active {
   outline: none;
@@ -93,6 +114,7 @@ input[type=text] {
   color: #999999;
   padding: 5px 10px;
   margin-right: 20px;
+  margin-bottom: 10px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
@@ -103,17 +125,32 @@ input[type=text] {
 input[type=submit] {
   font-family: "CABNDWebBold", Helvetica, Arial, sans-serif;
   font-style: normal;
-  background: #f16421;
+  background: #999999;
   border: none;
-  height: 40px;
-  line-height: 40px;
-  font-size: 28px;
+  height: 25px;
+  line-height: 24px;
   text-transform: uppercase;
   color: white;
 }
 input[type=submit]:hover {
   background: #ebe2e2;
   color: #f16421;
+}
+
+h1 {
+  display: inline;
+  float: left;
+  margin-right: 15px;
+  width: 945px;
+  width: 100%;
+  font-family: "CABNDWebBold", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  margin-top: 60px;
+  margin-bottom: 45px;
+  font-size: 3em;
+}
+* html h1 {
+  overflow-x: hidden;
 }
 
 body {
@@ -134,7 +171,7 @@ body #menu.fixed {
   position: fixed;
 }
 body #menu ul {
-  width: 950px;
+  width: 960px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
@@ -164,21 +201,36 @@ body #menu ul li a {
   margin-right: 50px;
   display: inline-block;
   height: 100%;
-  -webkit-transition: color 0.25s linear 0.1s;
-  transition: color 0.25s linear 0.1s;
+  font-weight: normal;
+  -moz-transition-property: color;
+  -webkit-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
+  -moz-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -moz-transition-timing-function: linear;
+  -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -moz-transition-delay: 0.1s;
+  -webkit-transition-delay: 0.1s;
+  -o-transition-delay: 0.1s;
+  transition-delay: 0.1s;
 }
 body #menu ul li a:hover {
   text-decoration: none;
   color: white;
 }
 body .gridded {
-  width: 950px;
+  width: 960px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
 }
 body #content {
-  width: 950px;
+  width: 960px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
@@ -198,7 +250,7 @@ body #content #top_ribbon #ribbon_one {
   margin-top: -130px;
 }
 body #content #top_ribbon #ribbon_one.fixed {
-  margin-left: 931px;
+  margin-left: 941px;
   position: fixed;
   right: auto;
   top: -168px;
@@ -213,13 +265,9 @@ body #content #logo {
   font-style: normal;
   display: inline;
   float: left;
-  margin-right: 10px;
-  width: 480px;
+  margin-right: 15px;
+  width: 545px;
   background: url("../images/sprite_logo.png") no-repeat -10px -10px;
-  padding-left: 78px;
-  margin-right: -10px;
-  font-size: 76px;
-  line-height: 0.86;
   height: 93px;
   z-index: 1;
 }
@@ -230,32 +278,41 @@ body #content #logo:hover {
   background-position: -10px -113px;
   cursor: pointer;
 }
-body #content #logo em {
-  color: #999999;
-}
 body #content #logo span {
   display: inline;
   float: left;
+  margin-right: 15px;
+  width: 465px;
+  padding-left: 80px;
+}
+* html body #content #logo span {
+  overflow-x: hidden;
+}
+body #content #logo #baseline {
   color: #f16421;
   font-size: 27px;
-  padding-top: 8px;
+  padding-top: 5px;
   text-transform: uppercase;
+}
+body #content #logo #title {
+  font-size: 76px;
+  line-height: 0.86;
+}
+body #content #logo #title em {
+  color: #999999;
 }
 body #content #staytunes {
   font-family: "CABNDWebBold", Helvetica, Arial, sans-serif;
   font-style: normal;
   display: inline;
   float: left;
-  margin-right: 10px;
-  width: 270px;
-  width: 360px;
+  margin-right: 15px;
+  width: 385px;
   background: url("../images/year.png") no-repeat 0 1px;
-  height: 206px;
+  height: 217px;
   font-size: 28px;
   text-transform: uppercase;
   color: #999999;
-  padding-left: 27px;
-  padding-bottom: 10px;
   border-bottom: 1px solid #999999;
 }
 * html body #content #staytunes {
@@ -266,29 +323,55 @@ body #content #staytunes span {
   float: left;
   line-height: 0.85;
   font-size: 76px;
+  padding-left: 26px;
 }
 body #content #staytunes #formmail {
-  padding-left: 135px;
-  padding-top: 19px;
-  margin-top: 8px;
-  background: url("../images/sprite_arrows.png") repeat-y -6px 110px;
+  display: inline;
+  float: left;
+  margin-right: 15px;
+  width: 385px;
+  margin-top: 5px;
+  background: url("../images/sprite_arrows.png") repeat-y 20px 110px;
   text-align: right;
   position: relative;
-  height: 90px;
-  z-index: -1;
+  z-index: 1;
 }
-body #content #staytunes #formmail input {
+* html body #content #staytunes #formmail {
+  overflow-x: hidden;
+}
+body #content #staytunes #formmail .form {
+  padding-top: 19px;
+  display: inline;
+  float: left;
+  margin-right: 15px;
+  width: 225px;
+  padding-left: 160px;
+}
+* html body #content #staytunes #formmail .form {
+  overflow-x: hidden;
+}
+body #content #staytunes #formmail .form input {
   width: 100%;
 }
-body #content #staytunes #formmail input[type=text] {
+body #content #staytunes #formmail .form input[type=text] {
   width: 91%;
-  margin-bottom: 10px;
+}
+body #content #staytunes #formmail .form input[type=submit] {
+  background: #f16421;
+  border: none;
+  font-size: 28px;
+  height: 40px;
+  line-height: 40px;
+}
+body #content #staytunes #formmail .form input[type=submit]:hover {
+  background: #ebe2e2;
+  color: #f16421;
 }
 body #content #bullshit {
   display: inline;
   float: left;
-  margin-right: 10px;
-  width: 830px;
+  margin-right: 15px;
+  width: 945px;
   overflow: hidden;
   *zoom: 1;
 }
@@ -298,12 +381,12 @@ body #content #bullshit {
 body #content h1 {
   display: inline;
   float: left;
-  margin-right: 10px;
-  width: 830px;
-  width: 100%;
+  margin-right: 15px;
+  width: 945px;
   font-family: "CABNDWebBold", Helvetica, Arial, sans-serif;
   font-style: normal;
   margin-top: 75px;
+  margin-bottom: auto;
   border-bottom: 1px solid #999999;
   font-size: 4.25em;
   position: relative;
@@ -340,7 +423,7 @@ body #content h1 .ribbon.sponsors {
   background: url("../images/ribbon04.png") no-repeat -6px 0;
 }
 body #content #discover {
-  width: 950px;
+  width: 960px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
@@ -354,7 +437,7 @@ body #content #discover {
   margin-bottom: 30px;
 }
 body #content #participant {
-  width: 950px;
+  width: 960px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
@@ -368,7 +451,7 @@ body #content #participant {
   margin-bottom: 30px;
 }
 body #content #sponsors {
-  width: 950px;
+  width: 960px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
@@ -382,28 +465,253 @@ body #content #sponsors {
   margin-bottom: 30px;
 }
 body #contactus {
-  background: #ebe2e2 url("../images/noise.png");
-  height: 50px;
+  background: #ebe2e2;
+  height: auto;
   width: 100%;
+  padding-bottom: 50px;
 }
 body #contactus .gridded {
-  width: 950px;
+  width: 960px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
 }
+body #contactus h1 {
+  color: #f16421;
+}
+body #contactus form {
+  display: inline;
+  float: left;
+  margin-right: 15px;
+  width: 385px;
+  font-size: 1.3em;
+}
+* html body #contactus form {
+  overflow-x: hidden;
+}
+body #contactus form input[type=text] {
+  background: white url("../images/sprite_contact.png") no-repeat;
+  display: inline;
+  float: left;
+  margin-right: 15px;
+  width: 225px;
+  overflow: hidden;
+  *zoom: 1;
+  border: #dcdcdc 1px solid;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  height: 18px;
+  padding-left: 40px;
+  outline: 0;
+}
+* html body #contactus form input[type=text] {
+  overflow-x: hidden;
+}
+body #contactus form textarea {
+  display: inline;
+  float: left;
+  margin-right: 15px;
+  width: 385px;
+  overflow: hidden;
+  *zoom: 1;
+  height: 150px;
+  border: #dcdcdc 1px solid;
+  margin-bottom: 20px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  padding: 5px 10px;
+  outline: 0;
+}
+* html body #contactus form textarea {
+  overflow-x: hidden;
+}
+body #contactus form input[type=submit] {
+  display: inline;
+  float: left;
+  margin-right: 15px;
+  width: 145px;
+  overflow: hidden;
+  *zoom: 1;
+  border: none;
+  background: #f16421;
+  font-size: 24px;
+  height: 35px;
+  line-height: 35px;
+}
+* html body #contactus form input[type=submit] {
+  overflow-x: hidden;
+}
+body #contactus form input[type=submit]:hover {
+  background: #ebe2e2;
+  color: #f16421;
+}
+body #contactus form input.name {
+  background-position: -7px -5px;
+}
+body #contactus form input.email {
+  background-position: -7px -45px;
+}
+body #contactus .contactinfo {
+  display: inline;
+  float: left;
+  margin-right: 15px;
+  width: 465px;
+  padding-left: 80px;
+}
+* html body #contactus .contactinfo {
+  overflow-x: hidden;
+}
+body #contactus .contactinfo li {
+  margin-bottom: 35px;
+  font-size: 1.1em;
+  overflow: hidden;
+  *zoom: 1;
+  padding-left: 80px;
+  background: url("../images/sprite_contact.png") no-repeat;
+}
+body #contactus .contactinfo li li:first-child {
+  padding-top: 7px;
+  font-size: 1.3em;
+}
+body #contactus .contactinfo li li:first-child a {
+  font-size: 0.9em;
+}
+body #contactus .contactinfo li li {
+  margin: 0;
+  margin-top: 5px;
+  padding-left: 0;
+  background: none;
+  font-weight: bold;
+  color: #f16421;
+}
+body #contactus .contactinfo li a {
+  display: inline;
+  float: left;
+  margin-right: 15px;
+  width: 385px;
+  font-weight: normal;
+}
+* html body #contactus .contactinfo li a {
+  overflow-x: hidden;
+}
+body #contactus .contactinfo li.adress {
+  background-position: 28px -125px;
+}
+body #contactus .contactinfo li.phone {
+  background-position: 28px -165px;
+  height: 32px;
+}
+body #contactus .contactinfo li.mail {
+  background-position: 28px -203px;
+}
+body #about {
+  display: inline-block;
+}
+body #about a, body #about a:hover {
+  color: #75b948;
+}
+body #about .about {
+  display: inline;
+  float: left;
+  margin-right: 15px;
+  width: 225px;
+  height: 500px;
+}
+* html body #about .about {
+  overflow-x: hidden;
+}
+body #about .about h1 {
+  color: #75b948;
+  margin-bottom: 15px;
+}
+body #about .trombi {
+  margin-top: 64px;
+  margin-bottom: 20px;
+}
+body #about .trombi li {
+  display: inline;
+  float: left;
+  margin-right: 15px;
+  width: 225px;
+  height: 260px;
+  margin-bottom: 20px;
+}
+* html body #about .trombi li {
+  overflow-x: hidden;
+}
+body #about .trombi li .face {
+  height: 150px;
+  width: 100%;
+  background: black;
+}
+body #about .trombi li .name {
+  font-family: "CABNDWebBold", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-size: 1.5em;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
 body #footer {
-  background: url("../images/ribbon_bottom.png") no-repeat 50% 0;
+  background: #e2e2e2 url("../images/ribbon_bottom.png") no-repeat 50% 0;
   padding-top: 60px;
-  margin-top: 100px;
-  height: 100px;
+  padding-bottom: 30px;
+  margin-top: 75px;
+  height: auto;
   width: 100%;
 }
 body #footer .gridded {
-  width: 950px;
+  width: 960px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
+}
+body #footer ul li {
+  display: inline;
+  float: left;
+  margin-right: 15px;
+  width: 225px;
+}
+* html body #footer ul li {
+  overflow-x: hidden;
+}
+body #footer ul li a:hover {
+  color: #00879e;
+}
+body #footer ul li h1 {
+  color: #00879e;
+  font-weight: bold;
+  font-size: 13px;
+  padding-bottom: 10px;
+  margin: 0;
+}
+body #footer ul li input[type=text] {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -o-border-radius: 0;
+  -ms-border-radius: 0;
+  -khtml-border-radius: 0;
+  border-radius: 0;
+  border-color: #dcdcdc;
+  height: 9px;
+  margin-top: -3px;
+}
+body #footer ul li input[type=submit] {
+  height: 23px;
+  line-height: 22px;
+  background: #00879e;
+  color: white;
+}
+body #footer ul li input[type=submit]:hover {
+  background: white;
+  color: #00879e;
 }
 
 @-moz-document url-prefix() {
