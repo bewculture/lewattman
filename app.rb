@@ -13,7 +13,8 @@ set :public, 'public'
 set :haml, {:format => :html5} # default Haml format is :xhtml
 
 before do
-  response.headers['Cache-Control'] = 'public, max-age=300'
+  # response.headers['Cache-Control'] = 'public, max-age=300'
+  expires 600, :public
 end
 
 # Application routes
