@@ -18,6 +18,7 @@ $bg             : #eeeff2
 $color          : #616161
 $bottom         : #e2e2e2
 $invisiblegrey  : #dcdcdc
+$darkgrey       : #989898
 // ... blues 
 $lightblue      : #00879e
 // ... red
@@ -369,7 +370,45 @@ body
           width: 73px 
           background: $ribbon4 no-repeat -6px 0  
     #discover
+      // position: relative
       +border-box(326px)
+      p
+        +column(5)
+      .duration
+        +font-sdg
+        +column(2)
+        background: $color
+        color: $menugrey
+        +border-radius(100px)
+        font-size: 7.5em
+        text-align: center
+        height: 140px
+        span
+          font-size: 0.25em
+          display: block
+          margin-top: -10px
+      .cloud
+        +column(5)
+        font-size: 1.7em
+        color: $darkgrey
+      .button
+        position: relative
+        bottom: -88px
+        background-position-x: 440px
+        text-align: right
+        em
+          font-size: 0.5em
+          float: left
+          display: block
+          width: 220px
+          line-height: 16px
+          text-align: left
+          position: relative
+          top: -59px
+
+
+
+
     #participant
       +border-box(124px)
       a.button
@@ -383,7 +422,7 @@ body
         margin-top: -15px
       .sponsors
         +column(8)
-        div
+        a
           height: 56px
           width: 200px
           display: inline-block
@@ -401,7 +440,28 @@ body
             background: $vice 8px -70px  no-repeat
             &:hover
               background-position-y: -14px
-        
+  
+  .button
+    $height: 80px
+    +float-right
+    +font-sdg
+    clear: right
+    background: $menugrey $arrows 193px 7px no-repeat
+    font: 
+      size: 1.8em
+      weight: lighter
+    color: $color
+    height: $height
+    // width:  167px
+    line-height: $height
+    padding: 0 60px
+    margin-bottom: 30px
+    &:hover
+      background: 
+        color:  $lightgreen 
+        position: 193px -57px
+      color: white
+      
 
   #contactus
     background: $lightred /*url('../images/noise.png')*/
@@ -494,26 +554,7 @@ body
             position: 28px -203px
         &.adress, &.phone, &.mail
           color: $lightgrey
-  .button
-    $height: 80px
-    +float-right
-    +font-sdg
-    clear: right
-    background: $menugrey $arrows 193px 7px no-repeat
-    font: 
-      size: 1.8em
-      weight: lighter
-    color: $color
-    height: $height
-    line-height: $height
-    padding: 0 60px
-    margin-bottom: 30px
-    &:hover
-      background: 
-        color:  $lightgreen 
-        position: 193px -57px
-      color: white
-
+  
   #about
     display: inline-block  
     a, a:hover
@@ -557,8 +598,10 @@ body
     ul
       li
         +column(3)
-        a:hover
-          color: $lightblue
+        a
+          color: $color
+          &:hover
+            color: $lightblue
         h1
           color: $lightblue
           font-weight: bold
@@ -584,9 +627,27 @@ body
             
     
 @-moz-document url-prefix()
-  body #content h1 .ribbon.discover
-    top: 20px
-  body #content h1 .ribbon.participant
-    top: 32px
-  body #content h1 .ribbon.sponsors
-    top: 32px
+  body
+    #content
+      h1
+        .ribbon.discover
+          top: 20px
+        .ribbon.participant
+          top: 32px
+        .ribbon.sponsors
+          top: 32px
+      #discover 
+        .duration
+          span
+            margin-top: -15px
+        .button 
+          background-position: 441px 10px
+          em
+            top: 22px
+          &:hover
+            background-position: 441px -54px
+    .button
+      background-position: 192px 10px
+      &:hover
+        background-position: 193px -53px
+    
