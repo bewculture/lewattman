@@ -9,7 +9,7 @@
 @import "compass/layout/grid-background"
 
 // Colors
-$orange     : #f16421 
+$orange         : #f16421 
 // ... greys 
 $lightgrey      : #999
 $black          : #5e5e5d
@@ -19,12 +19,13 @@ $color          : #616161
 $bottom         : #e2e2e2
 $invisiblegrey  : #dcdcdc
 // ... blues 
-$lightblue  : #00879e
+$lightblue      : #00879e
 // ... red
-$lightred   : #ebe2e2
+$lightred       : #ebe2e2
 // ... greens
-$green      : #75b948
-$inside     : white
+$green          : #75b948
+$lightgreen     : #71be44
+$inside         : white
 
 // Default Parameters
 $blueprint_grid_columns     : 12
@@ -39,6 +40,17 @@ $arrows   : url('../images/sprite_arrows.png')
 $contacts : url('../images/sprite_contact.png')
 $logo     : url('../images/sprite_logo.png')
 $year     : url('../images/year.png')
+$noise    : url('../images/noise.png')
+
+$ribbon1  : url('../images/ribbon01.png')
+$ribbon2  : url('../images/ribbon02.png')
+$ribbon3  : url('../images/ribbon03.png')
+$ribbon4  : url('../images/ribbon04.png')
+$ribbon-bottom  : url('../images/ribbon_bottom.png')
+
+$gameone  : url('../images/sprite_logo_gameone.png')
+$vice     : url('../images/sprite_logo_vice.png')
+$metro    : url('../images/sprite_logo_metro.png')
 
 .orange
   color: $orange
@@ -102,19 +114,26 @@ $year     : url('../images/year.png')
   @-moz-document url-prefix() { $selector { $values; } }
 
 =border-box($x)
+  // +showgrid 
   $padding: 15px
+  $padding_top: 33px
   +container
-  height: $x
+  height: $x - $padding_top + $padding
   padding: 
-    top: $padding
+    top: $padding_top
     left: $padding
-    right: $padding
+    right: 0
     bottom: 0
   border:
     bottom: 1px solid $lightgrey
   position: relative
   margin:
     bottom: 30px
+  position: relative
+
+      
+    
+    
 
 // DEBUG
 
@@ -123,10 +142,8 @@ $year     : url('../images/year.png')
         
 // Links
 a
-  color: $color
   text-decoration: none
   font-weight: bold
-  +single-transition(color, .5s, linear, .1s)
   &:hover
     color: $orange
   &:focus,
@@ -166,9 +183,9 @@ h1
 
 body
   +font-default
-  background: $bg url('../images/noise.png')
+  background: $bg $noise
   color: $color
-    
+  
   #menu
     background: $orange
     position: absolute
@@ -218,7 +235,7 @@ body
       z-index: 11
       position: relative
       #ribbon_one
-        background: url('../images/ribbon01.png') no-repeat -11px -9px
+        background: $ribbon1 no-repeat -11px -9px
         height: 383px
         width: 73px
         
@@ -320,13 +337,16 @@ body
       margin:
         top: 75px
         bottom: auto
+      padding:
+        left: 13px
+        right: 17px
       border:
         bottom: 1px solid $lightgrey
       font-size: 4.25em
       position: relative
       &.small
         font-size: 3em
-      .ribbon
+      em.ribbon
         background: no-repeat
         position: absolute
         //border: 1px solid
@@ -335,25 +355,53 @@ body
           top: 15px
           height: 413px
           width: 73px 
-          background: url('../images/ribbon02.png') no-repeat 0 0
+          background: $ribbon2 no-repeat 0 0
         &.participant
           left: -73px
           top: 27px
           height: 204px
           width: 73px 
-          background: url('../images/ribbon03.png') no-repeat 6px 0
+          background: $ribbon3 no-repeat 6px 0
         &.sponsors
           left: -68px
           top: 27px
           height: 282px
           width: 73px 
-          background: url('../images/ribbon04.png') no-repeat -6px 0  
+          background: $ribbon4 no-repeat -6px 0  
     #discover
       +border-box(326px)
     #participant
       +border-box(124px)
+      a.button
+        margin-top: -5px
+      p
+        background: none
+        +column(7)
     #sponsors
       +border-box(198px)
+      a.button
+        margin-top: -15px
+      .sponsors
+        +column(8)
+        div
+          height: 56px
+          width: 200px
+          display: inline-block
+          margin-bottom: 20px
+          &.gameone
+            background: $gameone  -9px -57px no-repeat
+            &:hover
+              background-position-y: 9px
+          &.metro
+            background: $metro -11px -96px  no-repeat
+            height: 63px
+            &:hover
+              background-position-y: -21px
+          &.vice
+            background: $vice 8px -70px  no-repeat
+            &:hover
+              background-position-y: -14px
+        
 
   #contactus
     background: $lightred /*url('../images/noise.png')*/
@@ -366,7 +414,7 @@ body
       +column(5)
       font-size: 1.3em
       input[type=text]
-        background: white url('../images/sprite_contact.png') no-repeat 
+        background: white $contacts no-repeat 
         +column(3)
         +clearfix
         border: $invisiblegrey 1px solid
@@ -415,7 +463,7 @@ body
         +clearfix
         padding:
           left: $blueprint-grid-margin + $blueprint-grid-width
-        background: url('../images/sprite_contact.png') no-repeat 
+        background: $contacts no-repeat 
         li:first-child
           padding:
             top: 7px
@@ -433,6 +481,7 @@ body
         a
           +column(5)
           font-weight: normal
+          color: $lightgrey
         &.adress
           background:
             position: 28px -125px
@@ -443,7 +492,27 @@ body
         &.mail
           background:
             position: 28px -203px
-    
+        &.adress, &.phone, &.mail
+          color: $lightgrey
+  .button
+    $height: 80px
+    +float-right
+    +font-sdg
+    clear: right
+    background: $menugrey $arrows 193px 7px no-repeat
+    font: 
+      size: 1.8em
+      weight: lighter
+    color: $color
+    height: $height
+    line-height: $height
+    padding: 0 60px
+    margin-bottom: 30px
+    &:hover
+      background: 
+        color:  $lightgreen 
+        position: 193px -57px
+      color: white
 
   #about
     display: inline-block  
@@ -478,7 +547,7 @@ body
         .description
   
   #footer
-    background: $bottom url('../images/ribbon_bottom.png') no-repeat 50% 0
+    background: $bottom $ribbon-bottom no-repeat 50% 0
     padding:
       top: 60px
       bottom: 30px

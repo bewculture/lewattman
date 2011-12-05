@@ -81,25 +81,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 a {
-  color: #616161;
   text-decoration: none;
   font-weight: bold;
-  -moz-transition-property: color;
-  -webkit-transition-property: color;
-  -o-transition-property: color;
-  transition-property: color;
-  -moz-transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  -moz-transition-timing-function: linear;
-  -webkit-transition-timing-function: linear;
-  -o-transition-timing-function: linear;
-  transition-timing-function: linear;
-  -moz-transition-delay: 0.1s;
-  -webkit-transition-delay: 0.1s;
-  -o-transition-delay: 0.1s;
-  transition-delay: 0.1s;
 }
 a:hover {
   color: #f16421;
@@ -387,6 +370,8 @@ body #content h1 {
   font-style: normal;
   margin-top: 75px;
   margin-bottom: auto;
+  padding-left: 13px;
+  padding-right: 17px;
   border-bottom: 1px solid #999999;
   font-size: 4.25em;
   position: relative;
@@ -397,25 +382,25 @@ body #content h1 {
 body #content h1.small {
   font-size: 3em;
 }
-body #content h1 .ribbon {
+body #content h1 em.ribbon {
   background: no-repeat;
   position: absolute;
 }
-body #content h1 .ribbon.discover {
+body #content h1 em.ribbon.discover {
   left: -73px;
   top: 15px;
   height: 413px;
   width: 73px;
   background: url("../images/ribbon02.png") no-repeat 0 0;
 }
-body #content h1 .ribbon.participant {
+body #content h1 em.ribbon.participant {
   left: -73px;
   top: 27px;
   height: 204px;
   width: 73px;
   background: url("../images/ribbon03.png") no-repeat 6px 0;
 }
-body #content h1 .ribbon.sponsors {
+body #content h1 em.ribbon.sponsors {
   left: -68px;
   top: 27px;
   height: 282px;
@@ -427,42 +412,95 @@ body #content #discover {
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
-  height: 326px;
-  padding-top: 15px;
+  height: 308px;
+  padding-top: 33px;
   padding-left: 15px;
-  padding-right: 15px;
+  padding-right: 0;
   padding-bottom: 0;
   border-bottom: 1px solid #999999;
   position: relative;
   margin-bottom: 30px;
+  position: relative;
 }
 body #content #participant {
   width: 960px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
-  height: 124px;
-  padding-top: 15px;
+  height: 106px;
+  padding-top: 33px;
   padding-left: 15px;
-  padding-right: 15px;
+  padding-right: 0;
   padding-bottom: 0;
   border-bottom: 1px solid #999999;
   position: relative;
   margin-bottom: 30px;
+  position: relative;
+}
+body #content #participant a.button {
+  margin-top: -5px;
+}
+body #content #participant p {
+  background: none;
+  display: inline;
+  float: left;
+  margin-right: 15px;
+  width: 545px;
+}
+* html body #content #participant p {
+  overflow-x: hidden;
 }
 body #content #sponsors {
   width: 960px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
-  height: 198px;
-  padding-top: 15px;
+  height: 180px;
+  padding-top: 33px;
   padding-left: 15px;
-  padding-right: 15px;
+  padding-right: 0;
   padding-bottom: 0;
   border-bottom: 1px solid #999999;
   position: relative;
   margin-bottom: 30px;
+  position: relative;
+}
+body #content #sponsors a.button {
+  margin-top: -15px;
+}
+body #content #sponsors .sponsors {
+  display: inline;
+  float: left;
+  margin-right: 15px;
+  width: 625px;
+}
+* html body #content #sponsors .sponsors {
+  overflow-x: hidden;
+}
+body #content #sponsors .sponsors div {
+  height: 56px;
+  width: 200px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+body #content #sponsors .sponsors div.gameone {
+  background: url("../images/sprite_logo_gameone.png") -9px -57px no-repeat;
+}
+body #content #sponsors .sponsors div.gameone:hover {
+  background-position-y: 9px;
+}
+body #content #sponsors .sponsors div.metro {
+  background: url("../images/sprite_logo_metro.png") -11px -96px no-repeat;
+  height: 63px;
+}
+body #content #sponsors .sponsors div.metro:hover {
+  background-position-y: -21px;
+}
+body #content #sponsors .sponsors div.vice {
+  background: url("../images/sprite_logo_vice.png") 8px -70px no-repeat;
+}
+body #content #sponsors .sponsors div.vice:hover {
+  background-position-y: -14px;
 }
 body #contactus {
   background: #ebe2e2;
@@ -598,6 +636,7 @@ body #contactus .contactinfo li a {
   margin-right: 15px;
   width: 385px;
   font-weight: normal;
+  color: #999999;
 }
 * html body #contactus .contactinfo li a {
   overflow-x: hidden;
@@ -611,6 +650,29 @@ body #contactus .contactinfo li.phone {
 }
 body #contactus .contactinfo li.mail {
   background-position: 28px -203px;
+}
+body #contactus .contactinfo li.adress, body #contactus .contactinfo li.phone, body #contactus .contactinfo li.mail {
+  color: #999999;
+}
+body .button {
+  display: inline;
+  float: right;
+  font-family: "CABNDWebBold", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  clear: right;
+  background: #ebe2e2 url("../images/sprite_arrows.png") 193px 7px no-repeat;
+  font-size: 1.8em;
+  font-weight: lighter;
+  color: #616161;
+  height: 80px;
+  line-height: 80px;
+  padding: 0 60px;
+  margin-bottom: 30px;
+}
+body .button:hover {
+  background-color: #71be44;
+  background-position: 193px -57px;
+  color: white;
 }
 body #about {
   display: inline-block;
