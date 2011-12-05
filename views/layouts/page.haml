@@ -3,11 +3,8 @@
   %head
     %meta{:'http-equiv' => "Content-Type", :content => "text/html; charset=utf-8"}
     %meta{:name => "lang", :content => "en"}
-    %title Sinatra Bootstrap
-    %link{:href=>'/stylesheets/application.css', :rel => 'stylesheet', :media => "screen", :type => "text/css"}
-    %script{:type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"}
-    %script{:type => "text/javascript", :src => "/javascripts/site.js"}
+    %link{:href=>'/stylesheets/temp.css', :media => "screen", :rel => 'stylesheet', :type => "text/css"}
+    %title Salondugeek
   %body
-    = partial :_nav_main
     = yield
     = partial :_analytics
