@@ -18,10 +18,6 @@ before do
 end
 
 # Application routes
-get '/salon' do
-  haml :index, :layout => :'layouts/application'
-end
-
 get '/' do
-  haml :about, :layout => :'layouts/page'
+  haml :index, :layout => :'layouts/application'
 end
