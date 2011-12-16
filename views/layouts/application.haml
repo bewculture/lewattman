@@ -5,31 +5,23 @@
     %meta{:name => "lang", :content => "en"}
     %title Le Wattman
     %link{:href=>'/stylesheets/application.css', :media => "screen", :rel => 'stylesheet', :type => "text/css"}
+    %link{:href=>'/stylesheets/counter.css', :media => "screen", :rel => 'stylesheet', :type => "text/css"}
     %script{:type => "text/javascript", :src => "http://code.jquery.com/jquery-1.5.min.js"}
     %script{:type => "text/javascript", :src => "/javascripts/lib/modernizr-1.6.min.js"}
-    %script{:type => "text/javascript", :src => "/javascripts/lib/StickyScroller.min.js"}
-    %script{:type => "text/javascript", :src => "/javascripts/lib/GetSet.js"}
+    / %script{:type => "text/javascript", :src => "/javascripts/lib/StickyScroller.min.js"}
+    / %script{:type => "text/javascript", :src => "/javascripts/lib/GetSet.js"}
+    %script{:type => "text/javascript", :src => "/javascripts/lib/flipcounter.min.js"}
     %script{:type => "text/javascript", :src => "/javascripts/application.js"}
     
   %body
-    = partial :_nav_main
+    / = partial :_nav_main
     #content
-      #top_ribbon
-        #ribbon_one
-      = partial :_header
-
-
-
-      #bullshit
-        TEXTE !!!!
       
-
-
       = yield
-      = partial :_social
-    = partial :_contact
-    .gridded
-      = partial :_about
-    = partial :_footer
+      / = partial :_social
+    /= partial :_contact
+    /.gridded
+    /  = partial :_about
+    / = partial :_footer
     
     = partial :_analytics

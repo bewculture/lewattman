@@ -139,72 +139,8 @@ h1 {
 body {
   font: 13px Arial, Helvetica, sans-serif;
   font-style: normal;
-  background: #eeeff2 url("../images/noise.png");
+  background: white;
   color: #616161;
-}
-body #menu {
-  background: #f16421;
-  position: absolute;
-  top: 41px;
-  width: 100%;
-  height: 49px;
-  z-index: 10;
-}
-body #menu.fixed {
-  position: fixed;
-}
-body #menu ul {
-  width: 960px;
-  margin: 0 auto;
-  overflow: hidden;
-  *zoom: 1;
-}
-body #menu ul li {
-  display: inline;
-  line-height: 48px;
-  font-size: 1.2em;
-  font-family: "CABNDWebBold", Helvetica, Arial, sans-serif;
-  font-style: normal;
-}
-body #menu ul li.followontwitter {
-  display: inline;
-  float: right;
-  background: url("../images/sprite_social.png") no-repeat 139px -10px;
-  padding-right: 40px;
-}
-body #menu ul li.followontwitter:hover {
-  background-position: 139px -58px;
-}
-body #menu ul li.followontwitter a {
-  width: 100%;
-}
-body #menu ul li a {
-  color: #ebe2e2;
-  text-decoration: none;
-  margin-right: 50px;
-  display: inline-block;
-  height: 100%;
-  font-weight: normal;
-  -moz-transition-property: color;
-  -webkit-transition-property: color;
-  -o-transition-property: color;
-  transition-property: color;
-  -moz-transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  -moz-transition-timing-function: linear;
-  -webkit-transition-timing-function: linear;
-  -o-transition-timing-function: linear;
-  transition-timing-function: linear;
-  -moz-transition-delay: 0.1s;
-  -webkit-transition-delay: 0.1s;
-  -o-transition-delay: 0.1s;
-  transition-delay: 0.1s;
-}
-body #menu ul li a:hover {
-  text-decoration: none;
-  color: white;
 }
 body .gridded {
   width: 960px;
@@ -220,28 +156,16 @@ body #content {
   padding-top: 143px;
   overflow: visible;
 }
-body #content #top_ribbon {
-  z-index: 11;
-  position: relative;
+body #content #flip-counter.flip-counter {
+  display: inline;
+  float: left;
+  margin-right: 15px;
+  width: 465px;
+  padding-left: 320px;
+  margin-left: -50px;
 }
-body #content #top_ribbon #ribbon_one {
-  background: url("../images/ribbon01.png") no-repeat -11px -9px;
-  height: 383px;
-  width: 73px;
-  position: absolute;
-  right: -54px;
-  margin-top: -130px;
-}
-body #content #top_ribbon #ribbon_one.fixed {
-  margin-left: 941px;
-  position: fixed;
-  right: auto;
-  top: -168px;
-  @-moz-document url-prefix() {
-    right: auto;
-    left: auto;
-}
-
+* html body #content #flip-counter.flip-counter {
+  overflow-x: hidden;
 }
 body #content #logo {
   font-family: "CABNDWebBold", Helvetica, Arial, sans-serif;
