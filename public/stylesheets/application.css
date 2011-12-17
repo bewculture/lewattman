@@ -1,797 +1,89 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
+/*
+Syntax error: Undefined mixin 'font-sdg'.
+        on line 167 of /Users/benjamin/code/projects/lewattman/views/stylesheets/application.sass, in `font-sdg'
+        from line 167 of /Users/benjamin/code/projects/lewattman/views/stylesheets/application.sass
 
-body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-q, blockquote {
-  quotes: none;
-}
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-a img {
-  border: none;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
-}
-
-.orange {
-  color: #f16421;
-}
-
-.blue {
-  color: #00879e;
-}
-
-.green {
-  color: #75b948;
-}
-
-.grey {
-  color: #616161 !important;
-}
-
-@font-face {
-  font-family: "CABNDWebBold";
-  src: url("cabndwebbold-webfont.eot");
-  src: url("cabndwebbold-webfont.eot?#iefix") format("embedded-opentype");
-  src: url("cabndwebbold-webfont.woff") format("woff");
-  src: url("cabndwebbold-webfont.svg#CABNDWebBold") format("svg"), url("cabndwebbold-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-a {
-  text-decoration: none;
-  font-weight: bold;
-}
-a:hover {
-  color: #f16421;
-}
-a:focus, a:active {
-  outline: none;
-}
-
-input[type=text] {
-  background: white;
-  border: 1px solid #999999;
-  color: #999999;
-  padding: 5px 10px;
-  margin-right: 20px;
-  margin-bottom: 10px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -khtml-border-radius: 5px;
-  border-radius: 5px;
-}
-input[type=submit] {
-  font-family: "CABNDWebBold", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  background: #999999;
-  border: none;
-  height: 25px;
-  line-height: 24px;
-  text-transform: uppercase;
-  color: white;
-}
-input[type=submit]:hover {
-  background: #ebe2e2;
-  color: #f16421;
-}
-
-h1 {
-  display: inline;
-  float: left;
-  margin-right: 15px;
-  width: 945px;
-  width: 100%;
-  font-family: "CABNDWebBold", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  margin-top: 60px;
-  margin-bottom: 45px;
-  font-size: 3em;
-}
-* html h1 {
-  overflow-x: hidden;
-}
-
-body {
-  font: 13px Arial, Helvetica, sans-serif;
-  font-style: normal;
-  background: white;
-  color: #616161;
-}
-body .gridded {
-  width: 960px;
-  margin: 0 auto;
-  overflow: hidden;
-  *zoom: 1;
-}
-body #content {
-  width: 960px;
-  margin: 0 auto;
-  overflow: hidden;
-  *zoom: 1;
-  padding-top: 143px;
-  overflow: visible;
-}
-body #content #flip-counter.flip-counter {
-  display: inline;
-  float: left;
-  margin-right: 15px;
-  width: 465px;
-  padding-left: 320px;
-  margin-left: -50px;
-}
-* html body #content #flip-counter.flip-counter {
-  overflow-x: hidden;
-}
-body #content #logo {
-  font-family: "CABNDWebBold", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  display: inline;
-  float: left;
-  margin-right: 15px;
-  width: 545px;
-  background: url("../images/sprite_logo.png") no-repeat -10px -10px;
-  height: 93px;
-  z-index: 1;
-}
-* html body #content #logo {
-  overflow-x: hidden;
-}
-body #content #logo:hover {
-  background-position: -10px -113px;
-  cursor: pointer;
-}
-body #content #logo span {
-  display: inline;
-  float: left;
-  margin-right: 15px;
-  width: 465px;
-  padding-left: 80px;
-}
-* html body #content #logo span {
-  overflow-x: hidden;
-}
-body #content #logo #baseline {
-  color: #f16421;
-  font-size: 27px;
-  padding-top: 5px;
-  text-transform: uppercase;
-}
-body #content #logo #title {
-  font-size: 76px;
-  line-height: 0.86;
-}
-body #content #logo #title em {
-  color: #999999;
-}
-body #content #staytunes {
-  font-family: "CABNDWebBold", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  display: inline;
-  float: left;
-  margin-right: 15px;
-  width: 385px;
-  background: url("../images/year.png") no-repeat 0 1px;
-  height: 217px;
-  font-size: 28px;
-  text-transform: uppercase;
-  color: #999999;
-  border-bottom: 1px solid #999999;
-}
-* html body #content #staytunes {
-  overflow-x: hidden;
-}
-body #content #staytunes span {
-  display: inline;
-  float: left;
-  line-height: 0.85;
-  font-size: 76px;
-  padding-left: 26px;
-}
-body #content #staytunes #formmail {
-  display: inline;
-  float: left;
-  margin-right: 15px;
-  width: 385px;
-  margin-top: 5px;
-  background: url("../images/sprite_arrows.png") repeat-y 20px 110px;
-  text-align: right;
-  position: relative;
-  z-index: 1;
-}
-* html body #content #staytunes #formmail {
-  overflow-x: hidden;
-}
-body #content #staytunes #formmail .form {
-  padding-top: 19px;
-  display: inline;
-  float: left;
-  margin-right: 15px;
-  width: 225px;
-  padding-left: 160px;
-}
-* html body #content #staytunes #formmail .form {
-  overflow-x: hidden;
-}
-body #content #staytunes #formmail .form input {
-  width: 100%;
-}
-body #content #staytunes #formmail .form input[type=text] {
-  width: 91%;
-}
-body #content #staytunes #formmail .form input[type=submit] {
-  background: #f16421;
-  border: none;
-  font-size: 28px;
-  height: 40px;
-  line-height: 40px;
-}
-body #content #staytunes #formmail .form input[type=submit]:hover {
-  background: #ebe2e2;
-  color: #f16421;
-}
-body #content #bullshit {
-  display: inline;
-  float: left;
-  margin-right: 15px;
-  width: 945px;
-  overflow: hidden;
-  *zoom: 1;
-}
-* html body #content #bullshit {
-  overflow-x: hidden;
-}
-body #content h1 {
-  display: inline;
-  float: left;
-  margin-right: 15px;
-  width: 945px;
-  font-family: "CABNDWebBold", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  margin-top: 75px;
-  margin-bottom: auto;
-  padding-left: 13px;
-  padding-right: 17px;
-  border-bottom: 1px solid #999999;
-  font-size: 4.25em;
-  position: relative;
-}
-* html body #content h1 {
-  overflow-x: hidden;
-}
-body #content h1.small {
-  font-size: 3em;
-}
-body #content h1 em.ribbon {
-  background: no-repeat;
-  position: absolute;
-}
-body #content h1 em.ribbon.discover {
-  left: -73px;
-  top: 15px;
-  height: 413px;
-  width: 73px;
-  background: url("../images/ribbon02.png") no-repeat 0 0;
-}
-body #content h1 em.ribbon.participant {
-  left: -73px;
-  top: 27px;
-  height: 204px;
-  width: 73px;
-  background: url("../images/ribbon03.png") no-repeat 6px 0;
-}
-body #content h1 em.ribbon.sponsors {
-  left: -68px;
-  top: 27px;
-  height: 282px;
-  width: 73px;
-  background: url("../images/ribbon04.png") no-repeat -6px 0;
-}
-body #content #discover {
-  width: 960px;
-  margin: 0 auto;
-  overflow: hidden;
-  *zoom: 1;
-  height: 308px;
-  padding-top: 33px;
-  padding-left: 15px;
-  padding-right: 0;
-  padding-bottom: 0;
-  border-bottom: 1px solid #999999;
-  position: relative;
-  margin-bottom: 30px;
-  position: relative;
-}
-body #content #discover p {
-  display: inline;
-  float: left;
-  margin-right: 15px;
-  width: 385px;
-}
-* html body #content #discover p {
-  overflow-x: hidden;
-}
-body #content #discover .duration {
-  font-family: "CABNDWebBold", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  display: inline;
-  float: left;
-  margin-right: 15px;
-  width: 145px;
-  background: #616161;
-  color: #ebe2e2;
-  -moz-border-radius: 100px;
-  -webkit-border-radius: 100px;
-  -o-border-radius: 100px;
-  -ms-border-radius: 100px;
-  -khtml-border-radius: 100px;
-  border-radius: 100px;
-  font-size: 7.5em;
-  text-align: center;
-  height: 140px;
-}
-* html body #content #discover .duration {
-  overflow-x: hidden;
-}
-body #content #discover .duration span {
-  font-size: 0.25em;
-  display: block;
-  margin-top: -10px;
-}
-body #content #discover .cloud {
-  display: inline;
-  float: left;
-  margin-right: 15px;
-  width: 385px;
-  font-size: 1.7em;
-  color: #989898;
-}
-* html body #content #discover .cloud {
-  overflow-x: hidden;
-}
-body #content #discover .button {
-  position: relative;
-  bottom: -88px;
-  background-position-x: 440px;
-  text-align: right;
-}
-body #content #discover .button em {
-  font-size: 0.5em;
-  float: left;
-  display: block;
-  width: 220px;
-  line-height: 16px;
-  text-align: left;
-  position: relative;
-  top: -59px;
-}
-body #content #participant {
-  width: 960px;
-  margin: 0 auto;
-  overflow: hidden;
-  *zoom: 1;
-  height: 106px;
-  padding-top: 33px;
-  padding-left: 15px;
-  padding-right: 0;
-  padding-bottom: 0;
-  border-bottom: 1px solid #999999;
-  position: relative;
-  margin-bottom: 30px;
-  position: relative;
-}
-body #content #participant a.button {
-  margin-top: -5px;
-}
-body #content #participant p {
-  background: none;
-  display: inline;
-  float: left;
-  margin-right: 15px;
-  width: 545px;
-}
-* html body #content #participant p {
-  overflow-x: hidden;
-}
-body #content #sponsors {
-  width: 960px;
-  margin: 0 auto;
-  overflow: hidden;
-  *zoom: 1;
-  height: 180px;
-  padding-top: 33px;
-  padding-left: 15px;
-  padding-right: 0;
-  padding-bottom: 0;
-  border-bottom: 1px solid #999999;
-  position: relative;
-  margin-bottom: 30px;
-  position: relative;
-}
-body #content #sponsors a.button {
-  margin-top: -15px;
-}
-body #content #sponsors .sponsors {
-  display: inline;
-  float: left;
-  margin-right: 15px;
-  width: 625px;
-}
-* html body #content #sponsors .sponsors {
-  overflow-x: hidden;
-}
-body #content #sponsors .sponsors a {
-  height: 56px;
-  width: 200px;
-  display: inline-block;
-  margin-bottom: 20px;
-}
-body #content #sponsors .sponsors a.gameone {
-  background: url("../images/sprite_logo_gameone.png") -9px -57px no-repeat;
-}
-body #content #sponsors .sponsors a.gameone:hover {
-  background-position-y: 9px;
-}
-body #content #sponsors .sponsors a.metro {
-  background: url("../images/sprite_logo_metro.png") -11px -96px no-repeat;
-  height: 63px;
-}
-body #content #sponsors .sponsors a.metro:hover {
-  background-position-y: -21px;
-}
-body #content #sponsors .sponsors a.vice {
-  background: url("../images/sprite_logo_vice.png") 8px -70px no-repeat;
-}
-body #content #sponsors .sponsors a.vice:hover {
-  background-position-y: -14px;
-}
-body .button {
-  display: inline;
-  float: right;
-  font-family: "CABNDWebBold", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  clear: right;
-  background: #ebe2e2 url("../images/sprite_arrows.png") 193px 7px no-repeat;
-  font-size: 1.8em;
-  font-weight: lighter;
-  color: #616161;
-  height: 80px;
-  line-height: 80px;
-  padding: 0 60px;
-  margin-bottom: 30px;
-}
-body .button:hover {
-  background-color: #71be44;
-  background-position: 193px -57px;
-  color: white;
-}
-body #contactus {
-  background: #ebe2e2;
-  height: auto;
-  width: 100%;
-  padding-bottom: 50px;
-}
-body #contactus .gridded {
-  width: 960px;
-  margin: 0 auto;
-  overflow: hidden;
-  *zoom: 1;
-}
-body #contactus h1 {
-  color: #f16421;
-}
-body #contactus form {
-  display: inline;
-  float: left;
-  margin-right: 15px;
-  width: 385px;
-  font-size: 1.3em;
-}
-* html body #contactus form {
-  overflow-x: hidden;
-}
-body #contactus form input[type=text] {
-  background: white url("../images/sprite_contact.png") no-repeat;
-  display: inline;
-  float: left;
-  margin-right: 15px;
-  width: 225px;
-  overflow: hidden;
-  *zoom: 1;
-  border: #dcdcdc 1px solid;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -o-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -khtml-border-radius: 3px;
-  border-radius: 3px;
-  height: 18px;
-  padding-left: 40px;
-  outline: 0;
-}
-* html body #contactus form input[type=text] {
-  overflow-x: hidden;
-}
-body #contactus form textarea {
-  display: inline;
-  float: left;
-  margin-right: 15px;
-  width: 385px;
-  overflow: hidden;
-  *zoom: 1;
-  height: 150px;
-  border: #dcdcdc 1px solid;
-  margin-bottom: 20px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -o-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -khtml-border-radius: 3px;
-  border-radius: 3px;
-  padding: 5px 10px;
-  outline: 0;
-}
-* html body #contactus form textarea {
-  overflow-x: hidden;
-}
-body #contactus form input[type=submit] {
-  display: inline;
-  float: left;
-  margin-right: 15px;
-  width: 145px;
-  overflow: hidden;
-  *zoom: 1;
-  border: none;
-  background: #f16421;
-  font-size: 24px;
-  height: 35px;
-  line-height: 35px;
-}
-* html body #contactus form input[type=submit] {
-  overflow-x: hidden;
-}
-body #contactus form input[type=submit]:hover {
-  background: #ebe2e2;
-  color: #f16421;
-}
-body #contactus form input.name {
-  background-position: -7px -5px;
-}
-body #contactus form input.email {
-  background-position: -7px -45px;
-}
-body #contactus .contactinfo {
-  display: inline;
-  float: left;
-  margin-right: 15px;
-  width: 465px;
-  padding-left: 80px;
-}
-* html body #contactus .contactinfo {
-  overflow-x: hidden;
-}
-body #contactus .contactinfo li {
-  margin-bottom: 35px;
-  font-size: 1.1em;
-  overflow: hidden;
-  *zoom: 1;
-  padding-left: 80px;
-  background: url("../images/sprite_contact.png") no-repeat;
-}
-body #contactus .contactinfo li li:first-child {
-  padding-top: 7px;
-  font-size: 1.3em;
-}
-body #contactus .contactinfo li li:first-child a {
-  font-size: 0.9em;
-}
-body #contactus .contactinfo li li {
-  margin: 0;
-  margin-top: 5px;
-  padding-left: 0;
-  background: none;
-  font-weight: bold;
-  color: #f16421;
-}
-body #contactus .contactinfo li a {
-  display: inline;
-  float: left;
-  margin-right: 15px;
-  width: 385px;
-  font-weight: normal;
-  color: #999999;
-}
-* html body #contactus .contactinfo li a {
-  overflow-x: hidden;
-}
-body #contactus .contactinfo li.adress {
-  background-position: 28px -125px;
-}
-body #contactus .contactinfo li.phone {
-  background-position: 28px -165px;
-  height: 32px;
-}
-body #contactus .contactinfo li.mail {
-  background-position: 28px -203px;
-}
-body #contactus .contactinfo li.adress, body #contactus .contactinfo li.phone, body #contactus .contactinfo li.mail {
-  color: #999999;
-}
-body #about {
-  display: inline-block;
-}
-body #about a, body #about a:hover {
-  color: #75b948;
-}
-body #about .about {
-  display: inline;
-  float: left;
-  margin-right: 15px;
-  width: 225px;
-  height: 500px;
-}
-* html body #about .about {
-  overflow-x: hidden;
-}
-body #about .about h1 {
-  color: #75b948;
-  margin-bottom: 15px;
-}
-body #about .trombi {
-  margin-top: 64px;
-  margin-bottom: 20px;
-}
-body #about .trombi li {
-  display: inline;
-  float: left;
-  margin-right: 15px;
-  width: 225px;
-  height: 260px;
-  margin-bottom: 20px;
-}
-* html body #about .trombi li {
-  overflow-x: hidden;
-}
-body #about .trombi li .face {
-  height: 150px;
-  width: 100%;
-  background: black;
-}
-body #about .trombi li .name {
-  font-family: "CABNDWebBold", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  font-size: 1.5em;
-  padding-top: 15px;
-  padding-bottom: 10px;
-}
-body #footer {
-  background: #e2e2e2 url("../images/ribbon_bottom.png") no-repeat 50% 0;
-  padding-top: 60px;
-  padding-bottom: 30px;
-  margin-top: 75px;
-  height: auto;
-  width: 100%;
-}
-body #footer .gridded {
-  width: 960px;
-  margin: 0 auto;
-  overflow: hidden;
-  *zoom: 1;
-}
-body #footer ul li {
-  display: inline;
-  float: left;
-  margin-right: 15px;
-  width: 225px;
-}
-* html body #footer ul li {
-  overflow-x: hidden;
-}
-body #footer ul li a {
-  color: #616161;
-}
-body #footer ul li a:hover {
-  color: #00879e;
-}
-body #footer ul li h1 {
-  color: #00879e;
-  font-weight: bold;
-  font-size: 13px;
-  padding-bottom: 10px;
-  margin: 0;
-}
-body #footer ul li input[type=text] {
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  -o-border-radius: 0;
-  -ms-border-radius: 0;
-  -khtml-border-radius: 0;
-  border-radius: 0;
-  border-color: #dcdcdc;
-  height: 9px;
-  margin-top: -3px;
-}
-body #footer ul li input[type=submit] {
-  height: 23px;
-  line-height: 22px;
-  background: #00879e;
-  color: white;
-}
-body #footer ul li input[type=submit]:hover {
-  background: white;
-  color: #00879e;
-}
-
-@-moz-document url-prefix() {
-  body #content h1 .ribbon.discover {
-    top: 20px;
-  }
-  body #content h1 .ribbon.participant {
-    top: 32px;
-  }
-  body #content h1 .ribbon.sponsors {
-    top: 32px;
-  }
-  body #content #discover .duration span {
-    margin-top: -15px;
-  }
-  body #content #discover .button {
-    background-position: 441px 10px;
-  }
-  body #content #discover .button em {
-    top: 22px;
-  }
-  body #content #discover .button:hover {
-    background-position: 441px -54px;
-  }
-  body .button {
-    background-position: 192px 10px;
-  }
-  body .button:hover {
-    background-position: 193px -53px;
-  }
-}
+Backtrace:
+/Users/benjamin/code/projects/lewattman/views/stylesheets/application.sass:167:in `font-sdg'
+/Users/benjamin/code/projects/lewattman/views/stylesheets/application.sass:167
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:168:in `visit_mixin'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:18:in `visit'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:27:in `block in visit_children'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:39:in `with_environment'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:26:in `visit_children'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:234:in `visit_rule'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:18:in `visit'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:27:in `block in visit_children'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:39:in `with_environment'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:26:in `visit_children'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:234:in `visit_rule'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:18:in `visit'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:27:in `block in visit_children'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:39:in `with_environment'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:26:in `visit_children'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:47:in `visit_root'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:18:in `visit'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/tree/root_node.rb:20:in `render'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/engine.rb:300:in `_render'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/engine.rb:248:in `block in render'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/util.rb:297:in `silence_sass_warnings'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/sass-3.1.10/lib/sass/engine.rb:248:in `render'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/compass-0.12.alpha.0/lib/compass/compiler.rb:136:in `block (2 levels) in compile'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/compass-0.12.alpha.0/lib/compass/compiler.rb:122:in `timed'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/compass-0.12.alpha.0/lib/compass/compiler.rb:135:in `block in compile'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/compass-0.12.alpha.0/lib/compass/logger.rb:45:in `red'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/compass-0.12.alpha.0/lib/compass/compiler.rb:134:in `compile'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/compass-0.12.alpha.0/lib/compass/compiler.rb:114:in `compile_if_required'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/compass-0.12.alpha.0/lib/compass/compiler.rb:99:in `block (2 levels) in run'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/compass-0.12.alpha.0/lib/compass/compiler.rb:97:in `each'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/compass-0.12.alpha.0/lib/compass/compiler.rb:97:in `block in run'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/compass-0.12.alpha.0/lib/compass/compiler.rb:122:in `timed'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/compass-0.12.alpha.0/lib/compass/compiler.rb:96:in `run'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/compass-0.12.alpha.0/lib/compass/commands/watch_project.rb:142:in `recompile'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/fssm-0.2.7/lib/fssm/path.rb:73:in `call'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/fssm-0.2.7/lib/fssm/path.rb:73:in `run_callback'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/fssm-0.2.7/lib/fssm/path.rb:55:in `callback_action'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/fssm-0.2.7/lib/fssm/path.rb:35:in `update'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/fssm-0.2.7/lib/fssm/state/directory.rb:39:in `block in modified'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/fssm-0.2.7/lib/fssm/state/directory.rb:37:in `each'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/fssm-0.2.7/lib/fssm/state/directory.rb:37:in `modified'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/fssm-0.2.7/lib/fssm/state/directory.rb:18:in `refresh'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/fssm-0.2.7/lib/fssm/backends/polling.rb:17:in `block (2 levels) in run'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/fssm-0.2.7/lib/fssm/backends/polling.rb:17:in `each'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/fssm-0.2.7/lib/fssm/backends/polling.rb:17:in `block in run'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/fssm-0.2.7/lib/fssm/backends/polling.rb:15:in `loop'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/fssm-0.2.7/lib/fssm/backends/polling.rb:15:in `run'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/fssm-0.2.7/lib/fssm/monitor.rb:26:in `run'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/fssm-0.2.7/lib/fssm.rb:20:in `monitor'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/compass-0.12.alpha.0/lib/compass/commands/watch_project.rb:86:in `perform'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/compass-0.12.alpha.0/lib/compass/commands/base.rb:18:in `execute'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/compass-0.12.alpha.0/lib/compass/commands/project_base.rb:19:in `execute'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/compass-0.12.alpha.0/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/compass-0.12.alpha.0/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/compass-0.12.alpha.0/bin/compass:25:in `block in <top (required)>'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/compass-0.12.alpha.0/bin/compass:39:in `call'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/gems/compass-0.12.alpha.0/bin/compass:39:in `<top (required)>'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/bin/compass:19:in `load'
+/Users/benjamin/.rvm/gems/ruby-1.9.2-head@rails3/bin/compass:19:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined mixin 'font-sdg'.\A         on line 167 of /Users/benjamin/code/projects/lewattman/views/stylesheets/application.sass, in `font-sdg'\A         from line 167 of /Users/benjamin/code/projects/lewattman/views/stylesheets/application.sass"; }
