@@ -153,57 +153,37 @@ a
   &:visited
     // Default style for visited links
 
-input
-  &[type=text]
-    background: white
-    border: 1px solid $lightgrey
-    color: $lightgrey
-    padding:  5px 10px
-    margin:
-      right: 20px
-      bottom: 10px
-    +border-radius
-  &[type=submit] 
-    +font-sdg
-    background: $lightgrey
-    border: none
-    +input-form(25px, 24px)
-    +middle-size($inside)
-    &:hover
-      background: $menugrey
-      color: $orange
 
 h1
   +column(12)
   width: 100%
-  +font-sdg
+  +font-wattman
   margin:
     top: 60px
     bottom: 45px
   font-size: 3em
+  text-align: center
 
 body
   +font-default
   //background: $bg $noise
   background: #FFF
   color: $color
-  
 
-  .gridded
-    +container
   #content
     +container
     //+showgrid
-    
     padding-top: 143px
     overflow: visible
-    #flip-counter.flip-counter
-      +column(6)
-      +prepend(4)
-      margin-left: -50px
-
+    .centered
+      float: right
+      position: relative
+      left: -50%     
+      #flip-counter.flip-counter
+        position: relative
+        left: 50%
+        clear: both
     
-
     
 @-moz-document url-prefix()
   body

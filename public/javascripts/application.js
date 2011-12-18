@@ -9,11 +9,14 @@ $(document).ready(function() {
 
 
     	
-    // Initialize a new counter
-     var wattmanCounter = new flipCounter('flip-counter', {value:5184000, inc:-1, pace:1000, auto:true});
-    // 30 Days !!
-
+    // Initialize a new counter    
+    var launch = new Date("January 30, 2012 10:32:00");
+    var diff = Math.round((launch - new Date()) / 1000);
+    
+    var wattmanCounter = new flipCounter('flip-counter', {value: diff, inc:-1, pace:1000, auto:true});
+    
     if (wattmanCounter.getValue() <= 0){
+        wattmanCounter.stop();
         console.log("FINI !");
     }
 
