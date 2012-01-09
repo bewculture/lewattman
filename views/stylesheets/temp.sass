@@ -1,8 +1,50 @@
+@import "compass"
+@import "blueprint"
 @import "compass/reset"
+@import "compass/css3/font-face"
+@import "blueprint/buttons"
+@import "compass/css3/border-radius"
+@import "compass/layout/sticky-footer"
+@import "compass/layout/grid-background"
+
+@import "partials/bootstrap"
+
+
 
 body
   height: 100%
+  color: $grayDark
+  #container
+    +container
+    //+showgrid
+    padding-top: 143px
+    overflow: visible
+    .centered
+      float: right
+      position: relative
+      left: -50%     
+      #flip-counter.flip-counter
+        position: relative
+        left: 50%
+        clear: both
+  footer
+    background: $grayLighter
+    border:
+      top: 1px solid #e5e5e5
+    position: absolute
+    bottom: 0
+    width: 100%
+    &.footer
+      text-shadow: 0 1px 0 #fff
+      .footerline
+        float: left
+        p
+      .staytunes
+        float: right
+
+
+     
   iframe
     height: 100%
-    width: 100%
+    width: 101%
         

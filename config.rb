@@ -1,7 +1,7 @@
 require './app'
 
 # Compass Configuration
-
+require 'compass-bootstrap'
 require 'grid-coordinates'
 #require 'meyer-reset'
 

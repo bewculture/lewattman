@@ -6,3 +6,6 @@ gem "haml", "~> 3.1.1"
 gem "sass", "~> 3.1.1"
 gem "compass", "0.12.alpha.0"
 gem "grid-coordinates", "~> 1.1.4"
+gem 'compass-bootstrap'
+
+gem "rake"
