@@ -6,12 +6,13 @@
 			%p 
 				→
 				%a{:href => "twitter.com/lewattman"} @lewattman
-		%form.staytunes
+		%form.staytunes{:action => "http://lewattman.us4.list-manage.com/subscribe/post?u=d063f882e56b133d9cc1090bd&id=135621bad3", :method => "post", :name => "mc-embedded-subscribe-form", :target => "_blank"}
 			%fieldset
 				%legend Stay Tuned
 				.cleafix
 					.input
 						.input-prepend
 							%span.add-on @
-							%input.medium{:id => "inputTunes", :type => "text", :size => "10"}
+							%input#mce-EMAIL.medium.email{:name => "EMAIL", :type => "text", :value => ""}
 						.help-block Enter you email below
+					%input{:id => "mce-group[1761]-1761-0", :name => "group[1761][1]", :type => "checkbox", :value => "1", :checked => true, :style => "visibility:hidden"}
