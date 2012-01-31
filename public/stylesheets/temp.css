@@ -2115,9 +2115,9 @@ body #container .centered {
   left: -50%;
 }
 body #container .centered .pop {
-  border: 1px solid red;
   position: relative;
   left: 100%;
+  top: 100px;
   clear: both;
   background: yellow;
   width: 100%;
