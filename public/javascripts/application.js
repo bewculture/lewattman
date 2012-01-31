@@ -20,4 +20,5 @@ $(document).ready(function() {
         console.log("FINI !");
     }
 
+    $(".pop").popover();
 });

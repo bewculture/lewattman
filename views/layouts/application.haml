@@ -6,17 +6,23 @@
     %title Le Wattman
     %link{:href=>'/stylesheets/temp.css', :media => "screen", :rel => 'stylesheet', :type => "text/css"}
     %link{:href=>'/stylesheets/counter.css', :media => "screen", :rel => 'stylesheet', :type => "text/css"}
-    %script{:type => "text/javascript", :src => "http://code.jquery.com/jquery-1.5.min.js"}
-    %script{:type => "text/javascript", :src => "/javascripts/lib/modernizr-1.6.min.js"}
-    - # %script{:type => "text/javascript", :src => "/javascripts/lib/StickyScroller.min.js"}
-    - # %script{:type => "text/javascript", :src => "/javascripts/lib/GetSet.js"}
-    %script{:type => "text/javascript", :src => "/javascripts/lib/flipcounter.min.js"}
-    %script{:type => "text/javascript", :src => "/javascripts/lib/date.js"}
-    %script{:type => "text/javascript", :src => "/javascripts/application.js"}
+
     %meta{:name => "google-site-verification", :content => "MJe1WL62eAkEvNWfZ779QQD62mPuuyoFJK8WjERfvRM"}
     
+
   %body
     #container  
       = yield
     = partial :_footer
   = partial :_analytics
+
+  %script{:type => "text/javascript", :src => "http://code.jquery.com/jquery-1.5.min.js"}
+  %script{:type => "text/javascript", :src => "/javascripts/lib/modernizr-1.6.min.js"}
+  - # %script{:type => "text/javascript", :src => "/javascripts/lib/StickyScroller.min.js"}
+  - # %script{:type => "text/javascript", :src => "/javascripts/lib/GetSet.js"}
+  %script{:type => "text/javascript", :src => "/javascripts/lib/flipcounter.min.js"}
+  %script{:type => "text/javascript", :src => "/javascripts/lib/date.js"}
+  %script{:type => "text/javascript", :src => "/javascripts/lib/bootstrap-twipsy.js"}
+  %script{:type => "text/javascript", :src => "/javascripts/lib/bootstrap-popover.js"}
+  
+  %script{:type => "text/javascript", :src => "/javascripts/application.js"}
