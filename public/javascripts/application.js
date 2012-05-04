@@ -10,7 +10,7 @@ $(document).ready(function() {
 
     	
     // Initialize a new counter    
-    var launch = new Date("April 31, 2012 10:32:00");
+    var launch = new Date("June 04, 2012 10:32:00");
     var diff = Math.round((launch - new Date()) / 1000);
     
     var wattmanCounter = new flipCounter('flip-counter', {value: diff, inc:-1, pace:1000, auto:true});
