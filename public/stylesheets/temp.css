@@ -2110,23 +2110,22 @@ body #container:after {
   clear: both;
 }
 body #container .centered {
-  float: left;
+  float: right;
   position: relative;
   left: -50%;
-  width: 100%;
 }
 body #container .centered .pop {
   position: relative;
-  left: 25%;
-  top: 100px;
+  left: 50%;
+  /*top: 100px;*/
   clear: both;
-  background: yellow;
   width: 100%;
   height: 100%;
+  display: inline-block;
 }
 body #container .centered #flip-counter.flip-counter {
   position: relative;
-  left: 50%;
+  /*left: 50%;*/
   clear: both;
 }
 body footer {
