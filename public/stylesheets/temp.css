@@ -2110,13 +2110,13 @@ body #container:after {
   clear: both;
 }
 body #container .centered {
-  float: right;
+  float: left;
   position: relative;
   left: -50%;
 }
 body #container .centered .pop {
   position: relative;
-  left: 100%;
+  left: 25%;
   top: 100px;
   clear: both;
   background: yellow;
