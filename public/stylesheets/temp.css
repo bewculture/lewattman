@@ -2113,6 +2113,7 @@ body #container .centered {
   float: left;
   position: relative;
   left: -50%;
+  width: 100%;
 }
 body #container .centered .pop {
   position: relative;
